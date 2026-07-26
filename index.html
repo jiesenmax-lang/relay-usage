@@ -170,6 +170,9 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
     <div class="hint-txt">
       令牌获取：登录中转站控制台 → <b>个人设置</b> → <b>系统访问令牌</b> → 生成并复制。<br>
       站点地址不带斜杠结尾，如 <span class="mono">https://docode.cc</span>。<br>
+      <b>用户 ID</b>：new-api 系（DoCode 等）用访问令牌查消耗时，<u>必须</u>额外填你的数字用户 ID（缺少会报 401 "New-Api-User header not provided"）。<br>
+      &nbsp;&nbsp;· 在哪里看：登录后点右上角头像 → 个人设置/账户，URL 里常带 <span class="mono">?i=1234</span> 或页面底部显示「ID: 1234」。<br>
+      &nbsp;&nbsp;· 若填错会报 "does not match logged in user"，改成正确数字即可。<br>
       若直连被浏览器跨域拦截，「代理前缀」可填你 NAS 上的反代地址（选填）。
     </div>
     <div id="stList"></div>
@@ -187,6 +190,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
     <div class="fg"><label>名称（随便起，如 DoCode）</label><input id="eName" placeholder="DoCode"></div>
     <div class="fg"><label>站点地址</label><input id="eBase" placeholder="https://docode.cc"></div>
     <div class="fg"><label>系统访问令牌 access token</label><input id="eToken" placeholder="在对方站点个人设置里生成"></div>
+    <div class="fg"><label>用户 ID（new-api 必需，见下方说明）</label><input id="eUid" placeholder="如 1234，DoCode 账户页可见的数字"></div>
     <div class="fg"><label>代理前缀（选填，CORS 兜底）</label><input id="eProxy" placeholder="如 https://你的NAS/proxy.php?u="></div>
     <label class="switch" style="margin-bottom:6px"><input type="checkbox" id="eEnabled" checked> 启用此站点</label>
     <div class="frow">
@@ -219,6 +223,10 @@ var QUOTA_PER_USD=500000;          // new-api 约定：500000 额度 = $1
 var FETCH_DAYS=30;                 // 拉取近 30 天日志
 var PAGE_SIZE=100, MAX_PAGES=10;   // 每站最多拉 10 页（1000 条）
 var PALETTE=['#4f6ef7','#1aad6b','#e0455a','#d98a06','#8b5cf6','#0ea5b7','#ef7ac0','#64748b'];
+// 预设站点：首次打开自动填入（含用户提供的 DoCode token）。userId 由后台探测后回填。
+var DEFAULT_STATIONS=[
+  {id:'_preset_docode',name:'DoCode',base:'https://docode.cc',token:'+VGbtbRy2UA9100ZekjMjk84dWq20A==',userId:'',proxy:'',enabled:true}
+];
 
 var stations=loadStations();       // [{id,name,base,token,proxy,enabled}]
 var userInfos={};                  // id -> {quota,used_quota,...} 或 {error}
@@ -284,18 +292,19 @@ function openEdit(id){
   $('eName').value=st?st.name:'';
   $('eBase').value=st?st.base:'';
   $('eToken').value=st?st.token:'';
+  $('eUid').value=st?(st.userId||''):'';
   $('eProxy').value=st?(st.proxy||''):'';
   $('eEnabled').checked=st?!!st.enabled:true;
   openMask('editMask');
 }
 function saveEdit(){
-  var name=$('eName').value.trim(),base=$('eBase').value.trim().replace(/\/+$/,''),token=$('eToken').value.trim(),proxy=$('eProxy').value.trim(),en=$('eEnabled').checked;
+  var name=$('eName').value.trim(),base=$('eBase').value.trim().replace(/\/+$/,''),token=$('eToken').value.trim(),uidv=$('eUid').value.trim(),proxy=$('eProxy').value.trim(),en=$('eEnabled').checked;
   if(!name||!base||!token){toast('名称、地址、令牌不能为空');return;}
   if(editingId){
     var st=stations.find(function(s){return s.id===editingId;});
-    if(st){st.name=name;st.base=base;st.token=token;st.proxy=proxy;st.enabled=en;}
+    if(st){st.name=name;st.base=base;st.token=token;st.userId=uidv;st.proxy=proxy;st.enabled=en;}
   }else{
-    stations.push({id:uid(),name:name,base:base,token:token,proxy:proxy,enabled:en});
+    stations.push({id:uid(),name:name,base:base,token:token,userId:uidv,proxy:proxy,enabled:en});
   }
   saveStations();closeMask('editMask');renderStList();renderChips();renderStationFilter();
   toast('已保存，点「刷新」拉取数据');
@@ -309,23 +318,29 @@ function delStation(id){
 
 /* ════════════ 数据拉取 ════════════ */
 function stUrl(st,path){return (st.proxy||'')+st.base+path;}
-function fetchJSON(url,token){
-  return fetch(url,{headers:{Authorization:'Bearer '+token},signal:AbortSignal.timeout(20000)})
+function fetchJSON(url,token,userId){
+  var hdrs={Authorization:'Bearer '+token};
+  if(userId)hdrs['New-Api-User']=String(userId);   // new-api 访问令牌查消耗必需
+  return fetch(url,{headers:hdrs,signal:AbortSignal.timeout(20000)})
     .then(function(r){
-      if(!r.ok)throw new Error('HTTP '+r.status);
-      return r.json();
-    }).then(function(j){
-      if(j&&j.success===false)throw new Error(j.message||'接口返回失败');
-      return j;
+      // 先尝试解析响应体（即使非 2xx 也要拿到服务端 message 提示）
+      return r.json().catch(function(){return {};}).then(function(j){
+        if(!r.ok){
+          var msg=(j&&j.message)||('HTTP '+r.status);
+          throw new Error(msg);
+        }
+        if(j&&j.success===false)throw new Error(j.message||'接口返回失败');
+        return j;
+      });
     });
 }
 function fetchStation(st){
-  var infoP=fetchJSON(stUrl(st,'/api/user/self'),st.token).then(function(j){return j.data;});
+  var infoP=fetchJSON(stUrl(st,'/api/user/self'),st.token,st.userId).then(function(j){return j.data;});
   var from=todayStart()-FETCH_DAYS*86400;
   var all=[],page0=0;
   function nextPage(){
     var qs='?p='+page0+'&page_size='+PAGE_SIZE+'&type=2&start_timestamp='+from;
-    return fetchJSON(stUrl(st,'/api/log/self'+qs),st.token).then(function(j){
+    return fetchJSON(stUrl(st,'/api/log/self'+qs),st.token,st.userId).then(function(j){
       var d=j.data||{},items=d.items||[];
       items.forEach(function(l){l._stId=st.id;l._st=st.name;});
       all=all.concat(items);
@@ -577,6 +592,15 @@ function applyAuto(){
 }
 $('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePrefs();applyAuto();});
 (function init(){
+  // 首次运行：把预设站点（含用户提供的 DoCode token）注入，已存在同名同地址则跳过
+  if(!stations.length){
+    DEFAULT_STATIONS.forEach(function(d){
+      if(!stations.find(function(x){return x.base===d.base&&x.name===d.name;})){
+        stations.push(JSON.parse(JSON.stringify(d)));
+      }
+    });
+    saveStations();
+  }
   // 默认筛选：近7天
   var now=new Date(),past=new Date(Date.now()-6*86400000);
   function dstr(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
@@ -584,6 +608,7 @@ $('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePr
   loadCache();
   applyAuto();
   renderAll();
+  renderStList();
   refreshAll(false);
   window.addEventListener('resize',function(){renderChart();});
 })();
