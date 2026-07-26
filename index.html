@@ -159,7 +159,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
   </div>
 
   <div style="text-align:center;font-size:12px;color:var(--sub);padding:6px 0 18px">
-    数据来自各站 new-api 接口，仅保存在你自己的浏览器里 · <span id="lastTs"></span>
+    数据由 GitHub Actions 每 10 分钟自动拉取 · 仅保存在你自己的浏览器里 · <span id="lastTs"></span>
   </div>
 </div>
 
@@ -255,7 +255,7 @@ var PALETTE=['#4f6ef7','#1aad6b','#e0455a','#d98a06','#8b5cf6','#0ea5b7','#ef7ac
 // 预设站点：首次打开自动填入（含用户提供的 DoCode token）。userId 由后台探测后回填。
 var DEFAULT_STATIONS=[
   // 预填你的 DoCode（已实测通过）：userId=6953，token 走代理前缀避免 CORS
-  {id:'_preset_docode',name:'DoCode',base:'https://docode.cc',token:'+VGbtbRy2UA9100ZekjMjk84dWq20A==',userId:'6953',proxy:'https://33rk2583pa59.vicp.fun/proxy.php?u=',enabled:true}
+  {id:'_preset_docode',name:'DoCode',base:'https://docode.cc',token:'+VGbtbRy2UA9100ZekjMjk84dWq20A==',userId:'6953',proxy:'',enabled:true}
 ];
 
 var stations=loadStations();       // [{id,name,base,token,proxy,enabled}]
@@ -399,9 +399,11 @@ function refreshAll(manual){
     }).catch(function(e){
       stationErr[st.id]=(e&&e.message)||'请求失败';
       // Failed to fetch = 典型浏览器 CORS 拦截（new-api 系老毛病）
+      // GitHub Actions 缓存模式下不再弹 CORS 引导（数据从 data/latest.json 来）
       var msg=String(e&&e.message||'');
       if(msg.indexOf('Failed to fetch')>=0||msg.indexOf('NetworkError')>=0||msg.indexOf('Load failed')>=0){
-        if(!sessionStorage.getItem('cors_guide_shown')){
+        // 如果有缓存数据则静默；首次无缓存才弹引导
+        if(!userInfos[st.id]&&!sessionStorage.getItem('cors_guide_shown')){
           sessionStorage.setItem('cors_guide_shown','1');
           showCorsGuide(st);
         }
@@ -698,6 +700,29 @@ function copyCorsSrc(){
   catch(e){document.execCommand('copy');toast('已复制');}
 }
 
+
+/* ════════════ GitHub Actions 缓存数据加载 ════════════ */
+function loadGithubCache(){
+  return fetch('data/latest.json?t='+Date.now())
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(!d||!d.logs||!d.logs.length)return null;
+      // 把缓存数据注入到 stations 数据结构
+      var st=stations.find(function(s){return s.name==='DoCode';});
+      if(!st)return null;
+      st._cached=true;
+      userInfos[st.id]=d.user||{};
+      delete stationErr[st.id];
+      d.logs.forEach(function(l){l._stId=st.id;l._st=st.name;});
+      logs=logs.filter(function(l){return l._stId!==st.id;}).concat(d.logs);
+      logs.sort(function(a,b){return b.created_at-a.created_at;});
+      saveCache();
+      renderAll();
+      return d;
+    })
+    .catch(function(){return null;});
+}
+
 /* ════════════ 启动 ════════════ */
 var autoTimer=null;
 function applyAuto(){
@@ -724,7 +749,17 @@ $('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePr
   applyAuto();
   renderAll();
   renderStList();
-  refreshAll(false);
+  // 先尝试从 GitHub Actions 缓存加载（同源，无 CORS），再尝试直连 API
+  loadGithubCache().then(function(cached){
+    if(!cached){
+      // 无缓存或缓存为空，尝试直连（可能被 CORS 拦截）
+      refreshAll(false);
+    } else {
+      // 有缓存数据，后台静默尝试直连更新（不阻塞显示）
+      refreshAll(false);
+      toast('已从缓存加载 '+cached.log_count+' 条记录 · '+cached.fetched_at);
+    }
+  });
   window.addEventListener('resize',function(){renderChart();});
 })();
 </script>
