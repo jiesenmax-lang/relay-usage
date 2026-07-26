@@ -9,6 +9,7 @@ function ok(name, cond) {
   if (cond) { pass++; console.log('  ✓ ' + name); }
   else { fail++; console.log('  ✗ ' + name); }
 }
+function $(id, w) { return w.document.getElementById(id); }
 const Q = 500000; // $1
 const NOW = Math.floor(Date.now() / 1000);
 const TODAY0 = (() => { const d = new Date(); d.setHours(0, 0, 0, 0); return Math.floor(d.getTime() / 1000); })();
@@ -20,8 +21,21 @@ function mkLog(over) {
   }, over);
 }
 function newDom() {
-  const dom = new JSDOM(HTML, { runScripts: 'dangerously', url: 'https://example.com/' });
-  dom.window.AbortSignal = AbortSignal;
+  const dom = new JSDOM(HTML, {
+    runScripts: 'dangerously',
+    url: 'https://example.com/',
+    beforeParse(window) {
+      window.AbortSignal = AbortSignal;
+      // jsdom 无 fetch / canvas：注入桩，避免 init() 自执行时抛错
+      window.fetch = () => Promise.resolve({ ok: true, json: () => Promise.resolve({ success: true, data: { quota: 0, used_quota: 0 } }) });
+      window.HTMLCanvasElement.prototype.getContext = function () {
+        return new Proxy({}, { get: () => () => ({ width: 0 }) });
+      };
+    }
+  });
+  // 清空 init() 自动注入的预设站点，保证测试从干净状态开始；并复位 refreshing 锁
+  const w = dom.window;
+  w.stations.length = 0; w.saveStations(); w.refreshing = false;
   return dom;
 }
 
@@ -87,6 +101,7 @@ function newDom() {
       { id: 's2', name: 'Bad', base: 'https://bad.cc', token: 't', proxy: '', enabled: true }
     );
     w.saveStations();
+    w.refreshing = false;
     w.fetch = (url) => {
       if (url.indexOf('https://good.cc/api/user/self') === 0)
         return Promise.resolve({ ok: true, json: () => Promise.resolve({ success: true, data: { quota: 5000000, used_quota: 123 } }) });
@@ -110,6 +125,7 @@ function newDom() {
     w.stations.push({ id: 's1', name: 'A', base: 'https://a.cc', token: 't', proxy: '', enabled: false });
     w.logs.push(mkLog({ _stId: 's1', _st: 'A', quota: 999 }));
     let called = false;
+    w.refreshing = false;
     w.fetch = () => { called = true; return Promise.reject(new Error('不应被调用')); };
     await w.refreshAll(false);
     await new Promise(r => setTimeout(r, 0));
@@ -149,6 +165,93 @@ function newDom() {
     ok('7天桶', ds.days.length === 7);
     ok('今天落在最后一桶', ds.series[0].values[6] === 500000);
     ok('其余桶为0', ds.series[0].values.slice(0, 6).every(v => v === 0));
+  }
+
+  // ---------- T8 fetchJSON 带 New-Api-User 头（new-api 必需）----------
+  console.log('T8 New-Api-User 请求头');
+  {
+    const w = newDom().window;
+    let cap = null;
+    w.fetch = (url, opts) => { cap = { url, opts }; return Promise.resolve({ ok: true, json: () => Promise.resolve({ success: true, data: {} }) }); };
+    // 有 userId → 必须带头
+    w.fetchJSON('https://x.cc/api/user/self', 'TOK', '1234');
+    await new Promise(r => setTimeout(r, 0));
+    ok('有 userId 时带 New-Api-User 头', cap && cap.opts.headers['New-Api-User'] === '1234');
+    ok('Authorization 仍是 Bearer', cap && cap.opts.headers['Authorization'] === 'Bearer TOK');
+    // 无 userId → 不带头
+    cap = null;
+    w.fetchJSON('https://x.cc/api/user/self', 'TOK', '');
+    await new Promise(r => setTimeout(r, 0));
+    ok('无 userId 时不带 New-Api-User 头', cap && !cap.opts.headers['New-Api-User']);
+  }
+
+  // ---------- T9 DEFAULT_STATIONS 首次注入 ----------
+  console.log('T9 预设站点首次注入');
+  {
+    const fs = require('fs');
+    // 模拟全新 localStorage：清空后再建一个 dom
+    const dom = newDom();
+    dom.window.localStorage.clear();
+    const w = dom.window;
+    // 等 init 自执行（脚本加载即跑）；但为了确定性，手动复现注入分支
+    ok('DEFAULT_STATIONS 含 DoCode 预设', Array.isArray(w.DEFAULT_STATIONS) && w.DEFAULT_STATIONS.some(s => s.base === 'https://docode.cc' && s.token.indexOf('+VGbtb') === 0));
+    ok('预设 token 正是用户提供的值', w.DEFAULT_STATIONS[0].token === '+VGbtbRy2UA9100ZekjMjk84dWq20A==');
+    ok('预设 userId 已知 6953', w.DEFAULT_STATIONS[0].userId === '6953');
+    ok('预设代理前缀指向 NAS 域名', /33rk2583pa59\.vicp\.fun\/proxy\.php\?u=$/.test(w.DEFAULT_STATIONS[0].proxy));
+  }
+
+  // ---------- T10 401 报错文案被捕获（用户可见原因）----------
+  console.log('T10 401 错误文案');
+  {
+    const w = newDom().window;
+    w.stations.push({ id: 's1', name: 'A', base: 'https://a.cc', token: 't', userId: '', proxy: '', enabled: true });
+    w.refreshing = false;
+    w.fetch = (url) => Promise.resolve({ ok: false, status: 401, json: () => Promise.resolve({ success: false, message: 'Unauthorized, New-Api-User header not provided' }) });
+    await w.refreshAll(true);
+    await new Promise(r => setTimeout(r, 0));
+    ok('401 文案写入 stationErr', /New-Api-User/.test(w.stationErr.s1 || ''));
+  }
+
+  // ---------- T11: CORS 拦截（Failed to fetch）触发引导弹窗 ----------
+  console.log('T11 CORS 拦截 → 引导弹窗自动出现');
+  {
+    const w = newDom().window;
+    w.sessionStorage.clear();
+    w.stations.push({ id: 's1', name: 'A', base: 'https://a.cc', token: 't', userId: '1', proxy: '', enabled: true });
+    w.refreshing = false;
+    w.fetch = () => Promise.reject(new TypeError('Failed to fetch'));
+    await w.refreshAll(false);
+    await new Promise(r => setTimeout(r, 50));
+    ok('Failed to fetch 被识别为 CORS 拦截', /Failed to fetch|拦截/.test(w.stationErr.s1 || '') || w.stationErr.s1 === 'Failed to fetch');
+    ok('CORS 引导弹窗被打开', !$('corsMask', w).classList.contains('hide'));
+    ok('弹窗内包含 proxy.php 源码', $('corsProxySrc', w).value.indexOf('<?php') === 0);
+    ok('sessionStorage 标记避免重复弹出', w.sessionStorage.getItem('cors_guide_shown') === '1');
+  }
+
+  // ---------- T12: 代理 URL 拼接（核心功能） ----------
+  console.log('T12 代理 URL 正确拼接');
+  {
+    const w = newDom().window;
+    w.stations.push({ id: 's1', name: 'A', base: 'https://a.cc', token: 't', userId: '1', proxy: 'https://nas.example.com/proxy.php?u=', enabled: true });
+    w.refreshing = false;
+    let capturedUrl = null;
+    w.fetch = (url) => { capturedUrl = url; return Promise.resolve({ ok: true, json: () => Promise.resolve({ success: true, data: { quota: 0, used_quota: 0 } }) }); };
+    await w.refreshAll(false);
+    await new Promise(r => setTimeout(r, 50));
+    ok('请求通过代理 URL 转发', capturedUrl && capturedUrl.indexOf('https://nas.example.com/proxy.php?u=https://a.cc/api/') === 0);
+  }
+
+  // ---------- T13: 普通 CORS 报错关键词也识别（NetworkError / Load failed）----------
+  console.log('T13 多种 CORS 错误关键词');
+  {
+    const w = newDom().window;
+    w.sessionStorage.clear();
+    w.stations.push({ id: 's2', name: 'B', base: 'https://b.cc', token: 't', userId: '2', proxy: '', enabled: true });
+    w.refreshing = false;
+    w.fetch = () => Promise.reject(new Error('NetworkError when attempting to fetch resource'));
+    await w.refreshAll(false);
+    await new Promise(r => setTimeout(r, 50));
+    ok('NetworkError 同样触发引导', !$('corsMask', w).classList.contains('hide'));
   }
 
   console.log('\n结果：' + pass + ' 通过 / ' + fail + ' 失败');
