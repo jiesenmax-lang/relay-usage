@@ -95,6 +95,13 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
 #toast{position:fixed;left:50%;bottom:36px;transform:translateX(-50%);background:#262a35;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;z-index:99;opacity:0;transition:opacity .25s;pointer-events:none;max-width:86vw;text-align:center}
 #toast.show{opacity:.95}
 .loading-line{font-size:12px;color:var(--sub);margin-bottom:10px;min-height:16px}
+/* ── chip 删除按钮 ── */
+.chip-x{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:rgba(224,69,90,.15);color:var(--red);font-size:12px;font-weight:700;margin-left:2px;cursor:pointer;line-height:1}
+.chip-x:hover{background:var(--red);color:#fff}
+/* ── 列排序按钮 ── */
+.col-btns{margin-left:4px;display:inline-flex;gap:1px}
+.col-btns button{border:none;background:transparent;color:#c6cad4;font-size:11px;padding:0 3px;cursor:pointer;border-radius:3px;line-height:1.4}
+.col-btns button:hover{background:var(--accent-soft);color:var(--accent)}
 </style>
 </head>
 <body>
@@ -144,10 +151,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
     <div class="loading-line" id="loadLine"></div>
     <div class="tbl-scroll">
       <table>
-        <thead><tr>
-          <th>时间</th><th>站点</th><th>模型</th><th>令牌</th>
-          <th>输入</th><th>输出</th><th>消耗</th><th>用时</th>
-        </tr></thead>
+        <thead id="thead"><tr></tr></thead>
         <tbody id="tbody"></tbody>
       </table>
     </div>
@@ -249,6 +253,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
 /* ════════════ 常量 & 状态 ════════════ */
 var LS_S='ru_stations_v1', LS_C='ru_cache_v1', LS_P='ru_prefs_v1';
 var QUOTA_PER_USD=500000;          // new-api 约定：500000 额度 = $1
+var QUOTA_PER_CNY=25000000;        // 实测：¥ = quota / 25000000（= USD/50）
 var FETCH_DAYS=30;                 // 拉取近 30 天日志
 var PAGE_SIZE=100, MAX_PAGES=10;   // 每站最多拉 10 页（1000 条）
 var PALETTE=['#4f6ef7','#1aad6b','#e0455a','#d98a06','#8b5cf6','#0ea5b7','#ef7ac0','#64748b'];
@@ -291,6 +296,7 @@ function $(id){return document.getElementById(id);}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function q2usd(q){return q/QUOTA_PER_USD;}
 function fmtUSD(q){var v=q2usd(q);return '$'+(v>=1?v.toFixed(2):v.toFixed(4));}
+function fmtCNY(q){var v=q/QUOTA_PER_CNY;return '¥'+(v>=1?v.toFixed(2):v.toFixed(4));}
 function fmtNum(n){return n>=10000?(n/1000).toFixed(1)+'k':String(n);}
 function dayKey(ts){var d=new Date(ts*1000);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
 function todayStart(){var d=new Date();d.setHours(0,0,0,0);return Math.floor(d.getTime()/1000);}
@@ -340,6 +346,8 @@ function saveEdit(){
   toast('已保存，点「刷新」拉取数据');
 }
 function delStation(id){
+  var st=stations.find(function(s){return s.id===id;});
+  if(st&&!confirm('确定删除站点「'+st.name+'」？'))return;
   stations=stations.filter(function(s){return s.id!==id;});
   delete userInfos[id];delete stationErr[id];
   logs=logs.filter(function(l){return l._stId!==id;});
@@ -460,6 +468,47 @@ function dailyStack(days){
   return{days:keys,series:series};
 }
 
+/* ════════════ 表格列定义（支持自定义排序） ════════════ */
+var COL_DEFS=[
+  {k:'time',label:'时间',fmt:function(l){return fmtTime(l.created_at);},cls:'mono'},
+  {k:'station',label:'站点',fmt:function(l){return '<span class="tag">'+esc(l._st||'')+'</span>';}},
+  {k:'model',label:'模型',fmt:function(l){return esc(l.model_name||'');}},
+  {k:'token',label:'令牌',fmt:function(l){return esc(l.token_name||'');}},
+  {k:'input',label:'输入',fmt:function(l){return fmtNum(l.prompt_tokens||0);}},
+  {k:'output',label:'输出',fmt:function(l){return fmtNum(l.completion_tokens||0);}},
+  {k:'quota_usd',label:'额度消费',fmt:function(l){return '<b>'+fmtUSD(l.quota||0)+'</b>';}},
+  {k:'quota_cny',label:'实际¥消费',fmt:function(l){return '<b style="color:var(--green)">'+fmtCNY(l.quota||0)+'</b>';}},
+  {k:'use_time',label:'用时',fmt:function(l){return l.use_time?l.use_time+'s':'—';}}
+];
+var DEFAULT_COL_ORDER=['time','station','model','token','input','output','quota_usd','quota_cny','use_time'];
+var colOrder=loadColOrder();
+function loadColOrder(){
+  try{
+    var o=JSON.parse(localStorage.getItem('ru_colorder')||'null');
+    if(Array.isArray(o)&&o.length===COL_DEFS.length&&o.every(function(k){return COL_DEFS.find(function(c){return c.k===k;});}))return o;
+  }catch(e){}
+  return DEFAULT_COL_ORDER.slice();
+}
+function saveColOrder(){localStorage.setItem('ru_colorder',JSON.stringify(colOrder));}
+function colMove(k,dir){
+  var i=colOrder.indexOf(k);if(i<0)return;
+  var j=i+dir;if(j<0||j>=colOrder.length)return;
+  colOrder.splice(i,1);colOrder.splice(j,0,k);
+  saveColOrder();renderTableHead();renderTable();
+}
+function renderTableHead(){
+  var h='';
+  colOrder.forEach(function(k,idx){
+    var c=COL_DEFS.find(function(x){return x.k===k;});if(!c)return;
+    h+='<th>'+c.label
+      +'<span class="col-btns">'
+      +(idx>0?'<button onclick="colMove(\''+k+'\',-1)" title="左移">←</button>':'')
+      +(idx<colOrder.length-1?'<button onclick="colMove(\''+k+'\',1)" title="右移">→</button>':'')
+      +'</span></th>';
+  });
+  $('thead').querySelector('tr').innerHTML=h;
+}
+
 /* ════════════ 渲染 ════════════ */
 function renderChips(){
   var h='';
@@ -467,7 +516,8 @@ function renderChips(){
     var cls=st.enabled?(stationErr[st.id]?'err':(userInfos[st.id]?'ok':'')):'off';
     var inf=userInfos[st.id];
     var bal=st.enabled?(stationErr[st.id]?'⚠️ 失败':(inf&&typeof inf.quota==='number'?fmtUSD(inf.quota):'未拉取')):'已停用';
-    h+='<span class="chip '+cls+'" onclick="openEdit(\''+st.id+'\')" title="'+esc(st.base)+'"><i class="dot"></i>'+esc(st.name)+' <small>'+bal+'</small></span>';
+    h+='<span class="chip '+cls+'" onclick="openEdit(\''+st.id+'\')" title="'+esc(st.base)+'"><i class="dot"></i>'+esc(st.name)+' <small>'+bal+'</small>'
+      +'<span class="chip-x" onclick="event.stopPropagation();delStation(\''+st.id+'\')" title="删除站点">×</span></span>';
   });
   h+='<span class="chip chip-add" onclick="openEdit(null)">＋ 添加</span>';
   $('chips').innerHTML=h;
@@ -564,16 +614,16 @@ function renderTable(){
   var slice=filtered.slice((page-1)*pageSize,page*pageSize);
   var h='';
   slice.forEach(function(l){
-    h+='<tr><td class="mono">'+fmtTime(l.created_at)+'</td>'
-      +'<td><span class="tag">'+esc(l._st||'')+'</span></td>'
-      +'<td>'+esc(l.model_name||'')+'</td>'
-      +'<td style="color:var(--sub)">'+esc(l.token_name||'')+'</td>'
-      +'<td>'+fmtNum(l.prompt_tokens||0)+'</td>'
-      +'<td>'+fmtNum(l.completion_tokens||0)+'</td>'
-      +'<td><b>'+fmtUSD(l.quota||0)+'</b></td>'
-      +'<td style="color:var(--sub)">'+(l.use_time?l.use_time+'s':'—')+'</td></tr>';
+    h+='<tr>';
+    colOrder.forEach(function(k){
+      var c=COL_DEFS.find(function(x){return x.k===k;});if(!c)return;
+      var val=c.fmt(l);
+      var style=c.cls?' class="'+c.cls+'"':'';
+      h+='<td'+style+'>'+val+'</td>';
+    });
+    h+='</tr>';
   });
-  if(!slice.length)h='<tr><td colspan="8" style="text-align:center;color:var(--sub);padding:22px">没有符合条件的记录，点「↻ 刷新」拉取</td></tr>';
+  if(!slice.length)h='<tr><td colspan="'+colOrder.length+'" style="text-align:center;color:var(--sub);padding:22px">没有符合条件的记录，点「↻ 刷新」拉取</td></tr>';
   $('tbody').innerHTML=h;
   $('pgInfo').textContent=page+' / '+pages+' · 共 '+filtered.length+' 条';
   $('pgPrev').disabled=page<=1;$('pgNext').disabled=page>=pages;
@@ -590,7 +640,7 @@ function setRange(r){
 function renderAll(){
   var aggAll=aggregate(logs);        // 概览卡：始终基于全量
   var aggF=aggregate(getFiltered()); // 排行：跟随明细筛选
-  renderChips();renderCards(aggAll);renderChart();renderRanks(aggF);renderStationFilter();renderTable();
+  renderChips();renderCards(aggAll);renderChart();renderRanks(aggF);renderStationFilter();renderTableHead();renderTable();
   var c=null;try{c=JSON.parse(localStorage.getItem(LS_C)||'null');}catch(e){}
   $('lastTs').textContent=c&&c.ts?('上次刷新 '+new Date(c.ts).toLocaleString('zh-CN',{hour12:false})):'尚未拉取';
 }
