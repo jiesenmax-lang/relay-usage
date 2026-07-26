@@ -76,7 +76,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
 .pager button:disabled{opacity:.4;cursor:default}
 /* ── 弹窗 ── */
 .mask{position:fixed;inset:0;background:rgba(20,22,30,.45);display:flex;align-items:center;justify-content:center;z-index:50;padding:16px}
-.mask.hide{display:none}
+.hide{display:none!important}
 .modal{background:var(--card);border-radius:14px;padding:20px;width:100%;max-width:420px;max-height:88vh;overflow-y:auto}
 .modal h3{font-size:16px;margin-bottom:14px}
 .fg{margin-bottom:12px}
@@ -749,14 +749,13 @@ $('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePr
   applyAuto();
   renderAll();
   renderStList();
-  // 先尝试从 GitHub Actions 缓存加载（同源，无 CORS），再尝试直连 API
+  // 先尝试从 GitHub Actions 缓存加载（同源，无 CORS），有缓存就不调 API
   loadGithubCache().then(function(cached){
     if(!cached){
       // 无缓存或缓存为空，尝试直连（可能被 CORS 拦截）
       refreshAll(false);
     } else {
-      // 有缓存数据，后台静默尝试直连更新（不阻塞显示）
-      refreshAll(false);
+      // 有缓存数据，直接显示，不调 API（避免 CORS 失败冲掉数据）
       toast('已从缓存加载 '+cached.log_count+' 条记录 · '+cached.fetched_at);
     }
   });
