@@ -102,6 +102,10 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
 .col-btns{margin-left:4px;display:inline-flex;gap:1px}
 .col-btns button{border:none;background:transparent;color:#c6cad4;font-size:11px;padding:0 3px;cursor:pointer;border-radius:3px;line-height:1.4}
 .col-btns button:hover{background:var(--accent-soft);color:var(--accent)}
+/* ── 板块排序按钮 ── */
+.sec-btns{display:inline-flex;gap:1px;margin-left:auto}
+.sec-btns button{border:none;background:transparent;color:#c6cad4;font-size:13px;padding:0 4px;cursor:pointer;border-radius:4px;line-height:1.4}
+.sec-btns button:hover{background:var(--accent-soft);color:var(--accent)}
 </style>
 </head>
 <body>
@@ -118,10 +122,11 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
   <div class="chips" id="chips"></div>
   <div class="empty-tip hide" id="emptyTip">还没有站点。点右上角「⚙️ 站点」添加你的第一个中转站（new-api 系，如 DoCode）。</div>
 
-  <div class="cards" id="cards"></div>
+  <div class="cards" id="cards" data-sec="cards"></div>
 
-  <div class="panel">
+  <div class="panel" data-sec="chartPanel">
     <h2>消耗趋势
+      <span class="sec-btns"><button onclick="secMove('chartPanel',-1)" title="上移">↑</button><button onclick="secMove('chartPanel',1)" title="下移">↓</button></span>
       <span class="seg" id="rangeSeg">
         <button data-r="7" class="on" onclick="setRange(7)">近7天</button>
         <button data-r="30" onclick="setRange(30)">近30天</button>
@@ -131,16 +136,20 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
     <div class="legend" id="legend"></div>
   </div>
 
-  <div class="panel">
-    <h2>消耗排行（当前明细范围内）</h2>
+  <div class="panel" data-sec="rankPanel">
+    <h2>消耗排行（当前明细范围内）
+      <span class="sec-btns"><button onclick="secMove('rankPanel',-1)" title="上移">↑</button><button onclick="secMove('rankPanel',1)" title="下移">↓</button></span>
+    </h2>
     <div class="ranks">
       <div id="rankModel"></div>
       <div id="rankStation"></div>
     </div>
   </div>
 
-  <div class="panel">
-    <h2>消耗明细</h2>
+  <div class="panel" data-sec="tablePanel">
+    <h2>消耗明细
+      <span class="sec-btns"><button onclick="secMove('tablePanel',-1)" title="上移">↑</button><button onclick="secMove('tablePanel',1)" title="下移">↓</button></span>
+    </h2>
     <div class="filters">
       <input type="date" id="fFrom">
       <input type="date" id="fTo">
@@ -509,6 +518,37 @@ function renderTableHead(){
   $('thead').querySelector('tr').innerHTML=h;
 }
 
+/* ════════════ 板块排序 ════════════ */
+var SEC_DEFS=['cards','chartPanel','rankPanel','tablePanel'];
+var secOrder=loadSecOrder();
+function loadSecOrder(){
+  try{
+    var o=JSON.parse(localStorage.getItem('ru_secorder')||'null');
+    if(Array.isArray(o)&&o.length===SEC_DEFS.length&&o.every(function(k){return SEC_DEFS.indexOf(k)>=0;}))return o;
+  }catch(e){}
+  return SEC_DEFS.slice();
+}
+function saveSecOrder(){localStorage.setItem('ru_secorder',JSON.stringify(secOrder));}
+function applySecOrder(){
+  var wrap=document.querySelector('.wrap');
+  var footer=wrap.querySelector('div[style*="text-align:center"]');
+  // 先把 4 个板块从 DOM 摘下来（保留 footer 在最后）
+  var els={};
+  secOrder.forEach(function(k){
+    var el=wrap.querySelector('[data-sec="'+k+'"]');
+    if(el)els[k]=el;
+  });
+  secOrder.forEach(function(k){
+    if(els[k])wrap.insertBefore(els[k],footer);
+  });
+}
+function secMove(k,dir){
+  var i=secOrder.indexOf(k);if(i<0)return;
+  var j=i+dir;if(j<0||j>=secOrder.length)return;
+  secOrder.splice(i,1);secOrder.splice(j,0,k);
+  saveSecOrder();applySecOrder();renderAll();
+}
+
 /* ════════════ 渲染 ════════════ */
 function renderChips(){
   var h='';
@@ -797,6 +837,7 @@ $('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePr
   $('fFrom').value=dstr(past);$('fTo').value=dstr(now);
   loadCache();
   applyAuto();
+  applySecOrder();      // 恢复用户自定义板块顺序
   renderAll();
   renderStList();
   // 先尝试从 GitHub Actions 缓存加载（同源，无 CORS），有缓存就不调 API
