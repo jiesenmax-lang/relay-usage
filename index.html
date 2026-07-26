@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中转站消耗看板</title>
+<style>
+:root{
+  --bg:#f4f5fb; --card:#fff; --ink:#1f2430; --sub:#8a8f9e; --line:#e8eaf2;
+  --accent:#4f6ef7; --accent-soft:#eef1fe; --green:#1aad6b; --green-soft:#e6f7ef;
+  --red:#e0455a; --red-soft:#fdecef; --amber:#d98a06; --amber-soft:#fff6e3;
+  --shadow:0 2px 10px rgba(31,36,48,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Arial,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;padding:14px}
+.wrap{max-width:960px;margin:0 auto}
+/* ── 顶栏 ── */
+.topbar{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.topbar h1{font-size:19px;font-weight:700;flex:1;white-space:nowrap}
+.tbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 12px;border-radius:9px;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;box-shadow:var(--shadow)}
+.tbtn:hover{background:var(--accent-soft)}
+.tbtn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.tbtn.primary:hover{filter:brightness(.93)}
+.tbtn:disabled{opacity:.5;cursor:default}
+.switch{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--sub);cursor:pointer;user-select:none}
+.switch input{accent-color:var(--accent)}
+/* ── 站点 chips ── */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;box-shadow:var(--shadow);cursor:pointer}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:#c6cad4}
+.chip.ok .dot{background:var(--green)}
+.chip.err .dot{background:var(--red)}
+.chip.off{opacity:.55}
+.chip small{color:var(--sub)}
+.chip-add{border:1px dashed #c6cad4;background:transparent;color:var(--sub)}
+.empty-tip{background:var(--card);border:1px dashed #c6cad4;border-radius:12px;padding:26px;text-align:center;color:var(--sub);font-size:14px;margin-bottom:14px}
+/* ── 概览卡 ── */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.card{background:var(--card);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
+.card .lbl{font-size:12px;color:var(--sub);margin-bottom:6px}
+.card .val{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.card .val small{font-size:12px;font-weight:400;color:var(--sub)}
+.card.warn .val{color:var(--amber)}
+/* ── 面板 ── */
+.panel{background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
+.panel h2{font-size:15px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.panel h2 .seg{margin-left:auto;display:inline-flex;background:var(--bg);border-radius:8px;padding:2px}
+.seg button{border:none;background:transparent;padding:5px 12px;font-size:12px;border-radius:6px;cursor:pointer;color:var(--sub)}
+.seg button.on{background:var(--card);color:var(--ink);box-shadow:var(--shadow);font-weight:600}
+canvas.chart{width:100%;height:220px;display:block}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--sub)}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+/* ── 排行 ── */
+.ranks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.ranks{grid-template-columns:1fr}}
+.rank-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.rank-row:last-child{border-bottom:none}
+.rank-row .nm{flex:0 0 40%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank-row .bar{flex:1;height:8px;background:var(--bg);border-radius:99px;overflow:hidden}
+.rank-row .bar i{display:block;height:100%;border-radius:99px}
+.rank-row .amt{flex:0 0 76px;text-align:right;font-variant-numeric:tabular-nums;color:var(--sub)}
+/* ── 明细表 ── */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filters select,.filters input{border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:13px;background:var(--card);color:var(--ink)}
+.filters input[type=date]{font-family:inherit}
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+th{text-align:left;color:var(--sub);font-weight:500;font-size:12px;padding:8px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 6px;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11px;background:var(--accent-soft);color:var(--accent)}
+.pager{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;font-size:13px;color:var(--sub)}
+.pager button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:5px 12px;cursor:pointer;font-size:13px}
+.pager button:disabled{opacity:.4;cursor:default}
+/* ── 弹窗 ── */
+.mask{position:fixed;inset:0;background:rgba(20,22,30,.45);display:flex;align-items:center;justify-content:center;z-index:50;padding:16px}
+.mask.hide{display:none}
+.modal{background:var(--card);border-radius:14px;padding:20px;width:100%;max-width:420px;max-height:88vh;overflow-y:auto}
+.modal h3{font-size:16px;margin-bottom:14px}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:12px;color:var(--sub);margin-bottom:5px}
+.fg input,.fg textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 10px;font-size:14px;font-family:inherit;background:var(--card);color:var(--ink)}
+.fg textarea{min-height:120px;resize:vertical;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+.frow{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.st-item{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;gap:8px;font-size:13px}
+.st-item .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st-item .nm small{display:block;color:var(--sub);font-size:11px}
+.mini{border:1px solid var(--line);background:var(--card);border-radius:7px;padding:4px 10px;font-size:12px;cursor:pointer}
+.mini.danger{color:var(--red);border-color:var(--red-soft);background:var(--red-soft)}
+.mini:hover{filter:brightness(.96)}
+.hint-txt{font-size:12px;color:var(--sub);line-height:1.7;background:var(--bg);border-radius:8px;padding:10px 12px;margin-bottom:12px}
+/* ── toast ── */
+#toast{position:fixed;left:50%;bottom:36px;transform:translateX(-50%);background:#262a35;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;z-index:99;opacity:0;transition:opacity .25s;pointer-events:none;max-width:86vw;text-align:center}
+#toast.show{opacity:.95}
+.loading-line{font-size:12px;color:var(--sub);margin-bottom:10px;min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <h1>📊 中转站消耗看板</h1>
+    <label class="switch"><input type="checkbox" id="autoRef"> 60s 自动刷新</label>
+    <button class="tbtn" onclick="openCfg()">⚙️ 站点</button>
+    <button class="tbtn" onclick="openIO()">⇅ 导入/导出</button>
+    <button class="tbtn primary" id="refBtn" onclick="refreshAll(true)">↻ 刷新</button>
+  </div>
+
+  <div class="chips" id="chips"></div>
+  <div class="empty-tip hide" id="emptyTip">还没有站点。点右上角「⚙️ 站点」添加你的第一个中转站（new-api 系，如 DoCode）。</div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="panel">
+    <h2>消耗趋势
+      <span class="seg" id="rangeSeg">
+        <button data-r="7" class="on" onclick="setRange(7)">近7天</button>
+        <button data-r="30" onclick="setRange(30)">近30天</button>
+      </span>
+    </h2>
+    <canvas class="chart" id="chart"></canvas>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="panel">
+    <h2>消耗排行（当前明细范围内）</h2>
+    <div class="ranks">
+      <div id="rankModel"></div>
+      <div id="rankStation"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>消耗明细</h2>
+    <div class="filters">
+      <input type="date" id="fFrom">
+      <input type="date" id="fTo">
+      <select id="fStation"><option value="">全部站点</option></select>
+      <input type="text" id="fModel" placeholder="模型名包含…" style="width:130px">
+      <button class="tbtn" onclick="applyFilter()">筛选</button>
+    </div>
+    <div class="loading-line" id="loadLine"></div>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr>
+          <th>时间</th><th>站点</th><th>模型</th><th>令牌</th>
+          <th>输入</th><th>输出</th><th>消耗</th><th>用时</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="pager">
+      <button id="pgPrev" onclick="pageMove(-1)">‹ 上一页</button>
+      <span id="pgInfo">1 / 1</span>
+      <button id="pgNext" onclick="pageMove(1)">下一页 ›</button>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-size:12px;color:var(--sub);padding:6px 0 18px">
+    数据来自各站 new-api 接口，仅保存在你自己的浏览器里 · <span id="lastTs"></span>
+  </div>
+</div>
+
+<!-- 站点管理弹窗 -->
+<div class="mask hide" id="cfgMask">
+  <div class="modal">
+    <h3>⚙️ 站点管理</h3>
+    <div class="hint-txt">
+      令牌获取：登录中转站控制台 → <b>个人设置</b> → <b>系统访问令牌</b> → 生成并复制。<br>
+      站点地址不带斜杠结尾，如 <span class="mono">https://docode.cc</span>。<br>
+      若直连被浏览器跨域拦截，「代理前缀」可填你 NAS 上的反代地址（选填）。
+    </div>
+    <div id="stList"></div>
+    <div class="frow" style="justify-content:flex-start">
+      <button class="tbtn primary" onclick="openEdit(null)">＋ 添加站点</button>
+      <button class="tbtn" onclick="closeMask('cfgMask')">完成</button>
+    </div>
+  </div>
+</div>
+
+<!-- 站点编辑弹窗 -->
+<div class="mask hide" id="editMask">
+  <div class="modal">
+    <h3 id="editTitle">添加站点</h3>
+    <div class="fg"><label>名称（随便起，如 DoCode）</label><input id="eName" placeholder="DoCode"></div>
+    <div class="fg"><label>站点地址</label><input id="eBase" placeholder="https://docode.cc"></div>
+    <div class="fg"><label>系统访问令牌 access token</label><input id="eToken" placeholder="在对方站点个人设置里生成"></div>
+    <div class="fg"><label>代理前缀（选填，CORS 兜底）</label><input id="eProxy" placeholder="如 https://你的NAS/proxy.php?u="></div>
+    <label class="switch" style="margin-bottom:6px"><input type="checkbox" id="eEnabled" checked> 启用此站点</label>
+    <div class="frow">
+      <button class="tbtn" onclick="closeMask('editMask')">取消</button>
+      <button class="tbtn primary" onclick="saveEdit()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- 导入导出弹窗 -->
+<div class="mask hide" id="ioMask">
+  <div class="modal">
+    <h3>⇅ 导入 / 导出配置</h3>
+    <div class="hint-txt">站点配置（含令牌）只存在本机浏览器。换设备时：这里导出 → 另一台设备粘贴导入。</div>
+    <div class="frow" style="justify-content:flex-start;margin:0 0 12px">
+      <button class="tbtn" onclick="doExport()">复制导出 JSON</button>
+      <button class="tbtn primary" onclick="doImport()">从文本框导入</button>
+    </div>
+    <div class="fg"><textarea id="ioText" placeholder="粘贴另一台设备导出的 JSON"></textarea></div>
+    <div class="frow"><button class="tbtn" onclick="closeMask('ioMask')">关闭</button></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ════════════ 常量 & 状态 ════════════ */
+var LS_S='ru_stations_v1', LS_C='ru_cache_v1', LS_P='ru_prefs_v1';
+var QUOTA_PER_USD=500000;          // new-api 约定：500000 额度 = $1
+var FETCH_DAYS=30;                 // 拉取近 30 天日志
+var PAGE_SIZE=100, MAX_PAGES=10;   // 每站最多拉 10 页（1000 条）
+var PALETTE=['#4f6ef7','#1aad6b','#e0455a','#d98a06','#8b5cf6','#0ea5b7','#ef7ac0','#64748b'];
+
+var stations=loadStations();       // [{id,name,base,token,proxy,enabled}]
+var userInfos={};                  // id -> {quota,used_quota,...} 或 {error}
+var logs=[];                       // 合并后的明细（带 _st 站点名）
+var stationErr={};                 // id -> 错误消息
+var range=7, page=1, pageSize=20;
+var filtered=[];
+var prefs=loadPrefs();
+
+/* ════════════ 存储 ════════════ */
+function loadStations(){
+  try{var s=JSON.parse(localStorage.getItem(LS_S)||'[]');return Array.isArray(s)?s:[];}catch(e){return[];}
+}
+function saveStations(){localStorage.setItem(LS_S,JSON.stringify(stations));}
+function loadPrefs(){
+  try{return JSON.parse(localStorage.getItem(LS_P)||'{}');}catch(e){return{};}
+}
+function savePrefs(){localStorage.setItem(LS_P,JSON.stringify(prefs));}
+function saveCache(){
+  try{localStorage.setItem(LS_C,JSON.stringify({ts:Date.now(),userInfos:userInfos,logs:logs,stationErr:stationErr}));}catch(e){}
+}
+function loadCache(){
+  try{
+    var c=JSON.parse(localStorage.getItem(LS_C)||'null');
+    if(c){userInfos=c.userInfos||{};logs=c.logs||[];stationErr=c.stationErr||{};return c.ts;}
+  }catch(e){}
+  return null;
+}
+
+/* ════════════ 工具 ════════════ */
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function q2usd(q){return q/QUOTA_PER_USD;}
+function fmtUSD(q){var v=q2usd(q);return '$'+(v>=1?v.toFixed(2):v.toFixed(4));}
+function fmtNum(n){return n>=10000?(n/1000).toFixed(1)+'k':String(n);}
+function dayKey(ts){var d=new Date(ts*1000);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+function todayStart(){var d=new Date();d.setHours(0,0,0,0);return Math.floor(d.getTime()/1000);}
+function monthStart(){var d=new Date();d.setDate(1);d.setHours(0,0,0,0);return Math.floor(d.getTime()/1000);}
+function fmtTime(ts){var d=new Date(ts*1000);return ('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)+' '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);}
+var toastTimer=null;
+function toast(msg){var t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show');},2600);}
+function openMask(id){$(id).classList.remove('hide');}
+function closeMask(id){$(id).classList.add('hide');}
+function uid(){return 's'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+
+/* ════════════ 站点 CRUD ════════════ */
+var editingId=null;
+function openCfg(){renderStList();openMask('cfgMask');}
+function renderStList(){
+  var h='';
+  if(!stations.length)h='<div style="color:var(--sub);font-size:13px;padding:8px 0">暂无站点</div>';
+  stations.forEach(function(st){
+    h+='<div class="st-item"><div class="nm"><b>'+esc(st.name)+'</b><small>'+esc(st.base)+(st.enabled?'':' · 已停用')+'</small></div>'
+      +'<button class="mini" onclick="openEdit(\''+st.id+'\')">编辑</button>'
+      +'<button class="mini danger" onclick="delStation(\''+st.id+'\')">删除</button></div>';
+  });
+  $('stList').innerHTML=h;
+}
+function openEdit(id){
+  editingId=id;
+  var st=id?stations.find(function(s){return s.id===id;}):null;
+  $('editTitle').textContent=st?'编辑站点':'添加站点';
+  $('eName').value=st?st.name:'';
+  $('eBase').value=st?st.base:'';
+  $('eToken').value=st?st.token:'';
+  $('eProxy').value=st?(st.proxy||''):'';
+  $('eEnabled').checked=st?!!st.enabled:true;
+  openMask('editMask');
+}
+function saveEdit(){
+  var name=$('eName').value.trim(),base=$('eBase').value.trim().replace(/\/+$/,''),token=$('eToken').value.trim(),proxy=$('eProxy').value.trim(),en=$('eEnabled').checked;
+  if(!name||!base||!token){toast('名称、地址、令牌不能为空');return;}
+  if(editingId){
+    var st=stations.find(function(s){return s.id===editingId;});
+    if(st){st.name=name;st.base=base;st.token=token;st.proxy=proxy;st.enabled=en;}
+  }else{
+    stations.push({id:uid(),name:name,base:base,token:token,proxy:proxy,enabled:en});
+  }
+  saveStations();closeMask('editMask');renderStList();renderChips();renderStationFilter();
+  toast('已保存，点「刷新」拉取数据');
+}
+function delStation(id){
+  stations=stations.filter(function(s){return s.id!==id;});
+  delete userInfos[id];delete stationErr[id];
+  logs=logs.filter(function(l){return l._stId!==id;});
+  saveStations();saveCache();renderStList();renderAll();
+}
+
+/* ════════════ 数据拉取 ════════════ */
+function stUrl(st,path){return (st.proxy||'')+st.base+path;}
+function fetchJSON(url,token){
+  return fetch(url,{headers:{Authorization:'Bearer '+token},signal:AbortSignal.timeout(20000)})
+    .then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      return r.json();
+    }).then(function(j){
+      if(j&&j.success===false)throw new Error(j.message||'接口返回失败');
+      return j;
+    });
+}
+function fetchStation(st){
+  var infoP=fetchJSON(stUrl(st,'/api/user/self'),st.token).then(function(j){return j.data;});
+  var from=todayStart()-FETCH_DAYS*86400;
+  var all=[],page0=0;
+  function nextPage(){
+    var qs='?p='+page0+'&page_size='+PAGE_SIZE+'&type=2&start_timestamp='+from;
+    return fetchJSON(stUrl(st,'/api/log/self'+qs),st.token).then(function(j){
+      var d=j.data||{},items=d.items||[];
+      items.forEach(function(l){l._stId=st.id;l._st=st.name;});
+      all=all.concat(items);
+      var total=d.total||0;
+      page0++;
+      if(items.length===PAGE_SIZE&&page0*PAGE_SIZE<total&&page0<MAX_PAGES)return nextPage();
+      return all;
+    });
+  }
+  var logP=nextPage();
+  return Promise.all([infoP,logP]).then(function(r){return{info:r[0],items:r[1]};});
+}
+var refreshing=false;
+function refreshAll(manual){
+  if(refreshing)return;
+  // 先清掉已删除/停用站点的日志（即使无启用站点也要执行）
+  logs=logs.filter(function(l){var st=stations.find(function(s){return s.id===l._stId;});return st&&st.enabled;});
+  var act=stations.filter(function(s){return s.enabled;});
+  if(!act.length){saveCache();renderAll();if(manual)toast('请先添加并启用站点');return;}
+  refreshing=true;
+  $('refBtn').disabled=true;$('refBtn').textContent='刷新中…';
+  var jobs=act.map(function(st){
+    return fetchStation(st).then(function(r){
+      userInfos[st.id]=r.info;delete stationErr[st.id];
+      logs=logs.filter(function(l){return l._stId!==st.id;}).concat(r.items);
+    }).catch(function(e){
+      stationErr[st.id]=(e&&e.message)||'请求失败';
+    });
+  });
+  Promise.all(jobs).then(function(){
+    logs=logs.filter(function(l){var st=stations.find(function(s){return s.id===l._stId;});return st&&st.enabled;});
+    logs.sort(function(a,b){return b.created_at-a.created_at;});
+    saveCache();
+    refreshing=false;$('refBtn').disabled=false;$('refBtn').textContent='↻ 刷新';
+    renderAll();
+    var errs=Object.keys(stationErr);
+    if(manual)toast(errs.length?('部分站点失败：'+errs.map(function(k){var st=stations.find(function(s){return s.id===k;});return(st?st.name:k);}).join('、')):'刷新完成');
+  });
+}
+
+/* ════════════ 聚合 ════════════ */
+function aggregate(list){
+  var t0=todayStart(),m0=monthStart(),w0=t0-6*86400;
+  var today=0,month=0,week=0,byModel={},byStation={},byDay={};
+  list.forEach(function(l){
+    var q=l.quota||0;
+    if(l.created_at>=t0)today+=q;
+    if(l.created_at>=m0)month+=q;
+    if(l.created_at>=w0)week+=q;
+    var mk=l.model_name||'(未知)';byModel[mk]=(byModel[mk]||0)+q;
+    var sk=l._st||'(未知)';byStation[sk]=(byStation[sk]||0)+q;
+    var dk=dayKey(l.created_at);byDay[dk]=(byDay[dk]||0)+q;
+  });
+  return{today:today,month:month,week:week,byModel:byModel,byStation:byStation,byDay:byDay};
+}
+function totalBalance(){
+  var sum=0,ok=false;
+  stations.forEach(function(st){
+    var inf=userInfos[st.id];
+    if(st.enabled&&inf&&typeof inf.quota==='number'){sum+=inf.quota;ok=true;}
+  });
+  return ok?sum:null;
+}
+function dailyStack(days){
+  // 返回 {days:[key...], series:[{name,color,values:[...] }]}
+  var keys=[],i,d;
+  for(i=days-1;i>=0;i--){d=new Date((todayStart()-i*86400)*1000);keys.push(dayKey(Math.floor(d.getTime()/1000)));}
+  var act=stations.filter(function(s){return s.enabled;});
+  var series=act.map(function(st,idx){
+    return{id:st.id,name:st.name,color:PALETTE[idx%PALETTE.length],values:keys.map(function(){return 0;})};
+  });
+  logs.forEach(function(l){
+    var dk=dayKey(l.created_at);var ki=keys.indexOf(dk);if(ki<0)return;
+    var se=series.find(function(s){return s.id===l._stId;});if(!se)return;
+    se.values[ki]+=l.quota||0;
+  });
+  return{days:keys,series:series};
+}
+
+/* ════════════ 渲染 ════════════ */
+function renderChips(){
+  var h='';
+  stations.forEach(function(st){
+    var cls=st.enabled?(stationErr[st.id]?'err':(userInfos[st.id]?'ok':'')):'off';
+    var inf=userInfos[st.id];
+    var bal=st.enabled?(stationErr[st.id]?'⚠️ 失败':(inf&&typeof inf.quota==='number'?fmtUSD(inf.quota):'未拉取')):'已停用';
+    h+='<span class="chip '+cls+'" onclick="openEdit(\''+st.id+'\')" title="'+esc(st.base)+'"><i class="dot"></i>'+esc(st.name)+' <small>'+bal+'</small></span>';
+  });
+  h+='<span class="chip chip-add" onclick="openEdit(null)">＋ 添加</span>';
+  $('chips').innerHTML=h;
+  $('emptyTip').classList.toggle('hide',stations.length>0);
+}
+function renderCards(agg){
+  var bal=totalBalance();
+  var h='';
+  h+='<div class="card"><div class="lbl">💰 总余额（各站合计）</div><div class="val">'+(bal===null?'—':fmtUSD(bal))+'</div></div>';
+  h+='<div class="card"><div class="lbl">📅 今日消耗</div><div class="val">'+fmtUSD(agg.today)+'</div></div>';
+  h+='<div class="card"><div class="lbl">📆 本月消耗</div><div class="val">'+fmtUSD(agg.month)+'</div></div>';
+  h+='<div class="card"><div class="lbl">📈 近7天消耗</div><div class="val">'+fmtUSD(agg.week)+'</div></div>';
+  $('cards').innerHTML=h;
+}
+function renderChart(){
+  var cv=$('chart'),ctx=cv.getContext&&cv.getContext('2d');
+  if(!ctx)return; // 无 canvas 环境（如测试）跳过绘图
+  var dpr=window.devicePixelRatio||1;
+  var W=cv.clientWidth,H=cv.clientHeight;
+  cv.width=W*dpr;cv.height=H*dpr;ctx.scale(dpr,dpr);
+  ctx.clearRect(0,0,W,H);
+  var ds=dailyStack(range),days=ds.days,series=ds.series;
+  var maxV=1;
+  days.forEach(function(_,i){var s=0;series.forEach(function(se){s+=se.values[i];});if(s>maxV)maxV=s;});
+  var padL=44,padB=22,padT=10,padR=6;
+  var cw=W-padL-padR,ch=H-padT-padB;
+  // 网格+纵轴
+  ctx.font='10px sans-serif';ctx.fillStyle='#9aa0ae';ctx.strokeStyle='#eceef4';ctx.lineWidth=1;
+  var ticks=4;
+  for(var t=0;t<=ticks;t++){
+    var y=padT+ch-(ch*t/ticks);
+    ctx.beginPath();ctx.moveTo(padL,y);ctx.lineTo(W-padR,y);ctx.stroke();
+    var val=maxV*t/ticks/QUOTA_PER_USD;
+    ctx.fillText('$'+(val>=1?val.toFixed(1):val.toFixed(2)),6,y+3);
+  }
+  // 柱
+  var n=days.length,slot=cw/n,bw=Math.min(26,slot*0.55);
+  days.forEach(function(dk,i){
+    var x=padL+slot*i+(slot-bw)/2,yBase=padT+ch;
+    series.forEach(function(se){
+      var v=se.values[i];if(v<=0)return;
+      var h=ch*v/maxV;yBase-=h;
+      ctx.fillStyle=se.color;ctx.fillRect(x,yBase,bw,h);
+    });
+    if(n<=7||i%Math.ceil(n/10)===0||i===n-1){
+      ctx.fillStyle='#9aa0ae';
+      var lbl=dk.slice(5);
+      ctx.fillText(lbl,Math.min(x,W-padR-26),H-8);
+    }
+  });
+  // 图例
+  var lh='';
+  series.forEach(function(se){lh+='<span><i style="background:'+se.color+'"></i>'+esc(se.name)+'</span>';});
+  $('legend').innerHTML=lh||'<span style="color:var(--sub)">暂无数据</span>';
+}
+function renderRanks(agg){
+  function rankHTML(obj){
+    var arr=Object.keys(obj).map(function(k){return[k,obj[k]];}).sort(function(a,b){return b[1]-a[1];}).slice(0,8);
+    if(!arr.length)return'<div style="color:var(--sub);font-size:13px;padding:6px 0">暂无数据</div>';
+    var max=arr[0][1]||1,h='';
+    arr.forEach(function(p,i){
+      h+='<div class="rank-row"><span class="nm" title="'+esc(p[0])+'">'+(i+1)+'. '+esc(p[0])+'</span>'
+        +'<span class="bar"><i style="width:'+Math.max(3,Math.round(p[1]/max*100))+'%;background:'+PALETTE[i%PALETTE.length]+'"></i></span>'
+        +'<span class="amt">'+fmtUSD(p[1])+'</span></div>';
+    });
+    return h;
+  }
+  $('rankModel').innerHTML='<div style="font-size:12px;color:var(--sub);margin-bottom:6px">按模型</div>'+rankHTML(agg.byModel);
+  $('rankStation').innerHTML='<div style="font-size:12px;color:var(--sub);margin-bottom:6px">按站点</div>'+rankHTML(agg.byStation);
+}
+function renderStationFilter(){
+  var sel=$('fStation'),cur=sel.value;
+  var h='<option value="">全部站点</option>';
+  stations.forEach(function(st){h+='<option value="'+st.id+'">'+esc(st.name)+'</option>';});
+  sel.innerHTML=h;sel.value=cur;
+}
+function applyFilter(){page=1;renderTable();}
+function getFiltered(){
+  var f=$('fFrom').value,t=$('fTo').value,sid=$('fStation').value,mq=$('fModel').value.trim().toLowerCase();
+  var fTs=f?Math.floor(new Date(f+'T00:00:00').getTime()/1000):null;
+  var tTs=t?Math.floor(new Date(t+'T23:59:59').getTime()/1000):null;
+  return logs.filter(function(l){
+    if(fTs&&l.created_at<fTs)return false;
+    if(tTs&&l.created_at>tTs)return false;
+    if(sid&&l._stId!==sid)return false;
+    if(mq&&String(l.model_name||'').toLowerCase().indexOf(mq)<0)return false;
+    return true;
+  });
+}
+function renderTable(){
+  filtered=getFiltered();
+  var pages=Math.max(1,Math.ceil(filtered.length/pageSize));
+  if(page>pages)page=pages;
+  var slice=filtered.slice((page-1)*pageSize,page*pageSize);
+  var h='';
+  slice.forEach(function(l){
+    h+='<tr><td class="mono">'+fmtTime(l.created_at)+'</td>'
+      +'<td><span class="tag">'+esc(l._st||'')+'</span></td>'
+      +'<td>'+esc(l.model_name||'')+'</td>'
+      +'<td style="color:var(--sub)">'+esc(l.token_name||'')+'</td>'
+      +'<td>'+fmtNum(l.prompt_tokens||0)+'</td>'
+      +'<td>'+fmtNum(l.completion_tokens||0)+'</td>'
+      +'<td><b>'+fmtUSD(l.quota||0)+'</b></td>'
+      +'<td style="color:var(--sub)">'+(l.use_time?l.use_time+'s':'—')+'</td></tr>';
+  });
+  if(!slice.length)h='<tr><td colspan="8" style="text-align:center;color:var(--sub);padding:22px">没有符合条件的记录，点「↻ 刷新」拉取</td></tr>';
+  $('tbody').innerHTML=h;
+  $('pgInfo').textContent=page+' / '+pages+' · 共 '+filtered.length+' 条';
+  $('pgPrev').disabled=page<=1;$('pgNext').disabled=page>=pages;
+  var errNames=Object.keys(stationErr).map(function(k){var st=stations.find(function(s){return s.id===k;});return(st?st.name:k)+'（'+stationErr[k]+'）';});
+  $('loadLine').textContent=errNames.length?('⚠️ '+errNames.join('；')+'——若是跨域拦截，请给该站配置代理前缀'):'';
+}
+function pageMove(d){page+=d;renderTable();}
+function setRange(r){
+  range=r;
+  var btns=$('rangeSeg').querySelectorAll('button');
+  btns.forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-r')===r);});
+  renderChart();
+}
+function renderAll(){
+  var aggAll=aggregate(logs);        // 概览卡：始终基于全量
+  var aggF=aggregate(getFiltered()); // 排行：跟随明细筛选
+  renderChips();renderCards(aggAll);renderChart();renderRanks(aggF);renderStationFilter();renderTable();
+  var c=null;try{c=JSON.parse(localStorage.getItem(LS_C)||'null');}catch(e){}
+  $('lastTs').textContent=c&&c.ts?('上次刷新 '+new Date(c.ts).toLocaleString('zh-CN',{hour12:false})):'尚未拉取';
+}
+
+/* ════════════ 导入导出 ════════════ */
+function openIO(){$('ioText').value='';openMask('ioMask');}
+function doExport(){
+  var txt=JSON.stringify(stations,null,2);
+  $('ioText').value=txt;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('已复制到剪贴板');},function(){toast('已放入文本框，请手动复制');});
+  }else{toast('已放入文本框，请手动复制');}
+}
+function doImport(){
+  var txt=$('ioText').value.trim();
+  if(!txt){toast('先粘贴 JSON');return;}
+  try{
+    var arr=JSON.parse(txt);
+    if(!Array.isArray(arr))throw new Error('格式不对');
+    var okCount=0;
+    arr.forEach(function(s){
+      if(!s||!s.name||!s.base||!s.token)return;
+      var exist=stations.find(function(x){return x.base===s.base.replace(/\/+$/,'')&&x.name===s.name;});
+      if(exist){exist.token=s.token;exist.proxy=s.proxy||'';exist.enabled=s.enabled!==false;}
+      else stations.push({id:uid(),name:s.name,base:s.base.replace(/\/+$/,''),token:s.token,proxy:s.proxy||'',enabled:s.enabled!==false});
+      okCount++;
+    });
+    saveStations();renderChips();renderStationFilter();
+    toast('导入 '+okCount+' 个站点');
+  }catch(e){toast('导入失败：'+e.message);}
+}
+
+/* ════════════ 启动 ════════════ */
+var autoTimer=null;
+function applyAuto(){
+  clearInterval(autoTimer);
+  if(prefs.auto)autoTimer=setInterval(function(){refreshAll(false);},60000);
+  $('autoRef').checked=!!prefs.auto;
+}
+$('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePrefs();applyAuto();});
+(function init(){
+  // 默认筛选：近7天
+  var now=new Date(),past=new Date(Date.now()-6*86400000);
+  function dstr(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+  $('fFrom').value=dstr(past);$('fTo').value=dstr(now);
+  loadCache();
+  applyAuto();
+  renderAll();
+  refreshAll(false);
+  window.addEventListener('resize',function(){renderChart();});
+})();
+</script>
+</body>
+</html>
