@@ -173,7 +173,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
       <b>用户 ID</b>：new-api 系（DoCode 等）用访问令牌查消耗时，<u>必须</u>额外填你的数字用户 ID（缺少会报 401 "New-Api-User header not provided"）。<br>
       &nbsp;&nbsp;· 在哪里看：登录后点右上角头像 → 个人设置/账户，URL 里常带 <span class="mono">?i=1234</span> 或页面底部显示「ID: 1234」。<br>
       &nbsp;&nbsp;· 若填错会报 "does not match logged in user"，改成正确数字即可。<br>
-      若直连被浏览器跨域拦截，「代理前缀」可填你 NAS 上的反代地址（选填）。
+      <b>代理前缀</b>：若直连被浏览器跨域拦截（看到「Failed to fetch」），把 NAS 上的 <span class="mono">proxy.php</span> 上传后填入此框即可，例如 <span class="mono">https://你的域名/proxy.php?u=</span>。
     </div>
     <div id="stList"></div>
     <div class="frow" style="justify-content:flex-start">
@@ -214,6 +214,35 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
   </div>
 </div>
 
+<!-- CORS 引导弹窗：检测到 Failed to fetch 时弹出，给出 proxy.php 部署步骤 -->
+<div class="mask hide" id="corsMask">
+  <div class="modal">
+    <h2>🌐 浏览器被跨域拦截了</h2>
+    <p style="color:var(--c-sub);margin:0 0 12px 0;font-size:13px;line-height:1.7">
+      这是 new-api 系中转站的常见问题：服务端 CORS 头不全，浏览器会拦掉响应。
+      <b>服务端没问题，是浏览器层面的限制。</b><br>
+      解决：在你能控制的服务器上跑一个 30 行的 PHP 反代（已帮你写好），浏览器走同源就不被拦了。
+    </p>
+    <div class="fg">
+      <label>📋 操作步骤（一次性，3 分钟）</label>
+      <ol style="margin:6px 0;padding-left:20px;font-size:13px;line-height:1.9;color:var(--c-fg)">
+        <li>下载 <span class="mono">proxy.php</span>（和你现在看到的页面在同一个 GitHub 仓库 <span class="mono">relay-usage</span> 根目录）</li>
+        <li>上传到你的 NAS（飞牛 fnOS）上 <span class="mono">php-comments-app</span> 同目录</li>
+        <li>访问 <span class="mono" id="corsTestUrl">https://你的域名/proxy.php?u=https://docode.cc/api/user/self</span> 能返回 JSON 即成功</li>
+        <li>点「编辑站点」→ 填「代理前缀」= <span class="mono" id="corsProxyDemo">https://你的域名/proxy.php?u=</span> → 保存 → 刷新</li>
+      </ol>
+    </div>
+    <div class="fg">
+      <label>或者：复制 <span class="mono">proxy.php</span> 源码（30 行，标准 PHP 7+/8）</label>
+      <textarea id="corsProxySrc" readonly style="height:200px;font-size:11px"></textarea>
+    </div>
+    <div class="frow">
+      <button class="tbtn" onclick="copyCorsSrc()">📋 复制源码</button>
+      <button class="tbtn primary" onclick="closeMask('corsMask')">我知道了</button>
+    </div>
+  </div>
+</div>
+
 <div id="toast"></div>
 
 <script>
@@ -225,7 +254,8 @@ var PAGE_SIZE=100, MAX_PAGES=10;   // 每站最多拉 10 页（1000 条）
 var PALETTE=['#4f6ef7','#1aad6b','#e0455a','#d98a06','#8b5cf6','#0ea5b7','#ef7ac0','#64748b'];
 // 预设站点：首次打开自动填入（含用户提供的 DoCode token）。userId 由后台探测后回填。
 var DEFAULT_STATIONS=[
-  {id:'_preset_docode',name:'DoCode',base:'https://docode.cc',token:'+VGbtbRy2UA9100ZekjMjk84dWq20A==',userId:'',proxy:'',enabled:true}
+  // 预填你的 DoCode（已实测通过）：userId=6953，token 走代理前缀避免 CORS
+  {id:'_preset_docode',name:'DoCode',base:'https://docode.cc',token:'+VGbtbRy2UA9100ZekjMjk84dWq20A==',userId:'6953',proxy:'https://33rk2583pa59.vicp.fun/proxy.php?u=',enabled:true}
 ];
 
 var stations=loadStations();       // [{id,name,base,token,proxy,enabled}]
@@ -368,6 +398,14 @@ function refreshAll(manual){
       logs=logs.filter(function(l){return l._stId!==st.id;}).concat(r.items);
     }).catch(function(e){
       stationErr[st.id]=(e&&e.message)||'请求失败';
+      // Failed to fetch = 典型浏览器 CORS 拦截（new-api 系老毛病）
+      var msg=String(e&&e.message||'');
+      if(msg.indexOf('Failed to fetch')>=0||msg.indexOf('NetworkError')>=0||msg.indexOf('Load failed')>=0){
+        if(!sessionStorage.getItem('cors_guide_shown')){
+          sessionStorage.setItem('cors_guide_shown','1');
+          showCorsGuide(st);
+        }
+      }
     });
   });
   Promise.all(jobs).then(function(){
@@ -581,6 +619,34 @@ function doImport(){
     saveStations();renderChips();renderStationFilter();
     toast('导入 '+okCount+' 个站点');
   }catch(e){toast('导入失败：'+e.message);}
+}
+
+// CORS 拦截引导：从仓库取 proxy.php 源码展示，附带代理 URL 示例
+var CORS_PROXY_CACHE=null;
+function fetchProxySrc(){
+  if(CORS_PROXY_CACHE)return Promise.resolve(CORS_PROXY_CACHE);
+  // 从同仓 raw CDN 取（GitHub Pages 不一定和仓库同源，但 CORS 头允许）
+  return fetch('https://raw.githubusercontent.com/jiesenmax-lang/relay-usage/main/proxy.php')
+    .then(function(r){return r.ok?r.text():Promise.reject(new Error('HTTP '+r.status));})
+    .then(function(t){CORS_PROXY_CACHE=t;return t;})
+    .catch(function(){return'<?php\n// （本地获取失败，请从 GitHub 仓库 jiesenmax-lang/relay-usage 下载 proxy.php）\n?>\n';});
+}
+function showCorsGuide(st){
+  fetchProxySrc().then(function(src){
+    $('corsProxySrc').value=src;
+    // 用站点 base 拼一个示例 URL
+    var base=(st&&st.base)?st.base:'https://docode.cc';
+    var demo='https://你的域名/proxy.php?u=';
+    $('corsProxyDemo').textContent=demo;
+    $('corsTestUrl').textContent=demo+base+'/api/user/self';
+    $('corsMask').classList.remove('hide');
+  });
+}
+function copyCorsSrc(){
+  var ta=$('corsProxySrc');
+  ta.select();ta.setSelectionRange(0,99999);
+  try{navigator.clipboard.writeText(ta.value).then(function(){toast('已复制到剪贴板');},function(){toast('已选中，请 Ctrl+C');});}
+  catch(e){document.execCommand('copy');toast('已复制');}
 }
 
 /* ════════════ 启动 ════════════ */
