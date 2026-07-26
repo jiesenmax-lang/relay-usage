@@ -1,0 +1,76 @@
+name: Fetch DoCode Usage
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch data from DoCode
+        env:
+          DOCODE_TOKEN: ${{ secrets.DOCODE_TOKEN }}
+          DOCODE_USER_ID: ${{ secrets.DOCODE_USER_ID }}
+        run: |
+          set -e
+          mkdir -p data
+
+          # Fetch user info
+          echo "Fetching user info..."
+          USER_JSON=$(curl -sf "https://docode.cc/api/user/self" \
+            -H "Authorization: Bearer $DOCODE_TOKEN" \
+            -H "New-Api-User: $DOCODE_USER_ID")
+
+          # Fetch logs (last 30 days)
+          echo "Fetching usage logs..."
+          FROM_TS=$(python3 -c "import time; print(int(time.time()) - 30*86400)")
+          ALL_LOGS="[]"
+          for PAGE in $(seq 0 9); do
+            LOG_JSON=$(curl -sf "https://docode.cc/api/log/self?p=$PAGE&page_size=100&type=2&start_timestamp=$FROM_TS" \
+              -H "Authorization: Bearer $DOCODE_TOKEN" \
+              -H "New-Api-User: $DOCODE_USER_ID")
+            ITEMS=$(echo "$LOG_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps(d.get('data',{}).get('items',[])))")
+            TOTAL=$(echo "$LOG_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('data',{}).get('total',0))")
+            COUNT=$(echo "$ITEMS" | python3 -c "import sys,json; print(len(json.load(sys.stdin)))")
+            ALL_LOGS=$(python3 -c "
+          import json,sys
+          existing=json.loads('$ALL_LOGS') if '$ALL_LOGS'!='[]' else []
+          new=json.loads(sys.stdin.read())
+          existing.extend(new)
+          print(json.dumps(existing))
+          " <<< "$ITEMS")
+            if [ "$COUNT" -lt 100 ] || [ $(( (PAGE+1)*100 )) -ge "$TOTAL" ]; then
+              break
+            fi
+          done
+
+          # Build output
+          python3 -c "
+          import json, sys, time
+          user = json.loads('''$USER_JSON''')
+          logs = json.loads('''$ALL_LOGS''')
+          output = {
+              'fetched_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+              'station': 'DoCode',
+              'user': user.get('data', {}),
+              'logs': logs,
+              'log_count': len(logs)
+          }
+          with open('data/latest.json', 'w', encoding='utf-8') as f:
+              json.dump(output, f, ensure_ascii=False, indent=2)
+          print(f'Wrote {len(logs)} log entries to data/latest.json')
+          "
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/latest.json
+          git diff --cached --quiet && echo "No changes" || \
+            git commit -m "update usage data $(date -u +%Y-%m-%dT%H:%M:%SZ)" && git push
