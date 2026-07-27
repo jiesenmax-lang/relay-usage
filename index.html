@@ -172,7 +172,7 @@ td .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
   </div>
 
   <div style="text-align:center;font-size:12px;color:var(--sub);padding:6px 0 18px">
-    数据由 GitHub Actions 每 10 分钟自动拉取 · 仅保存在你自己的浏览器里 · <span id="lastTs"></span>
+    数据由 GitHub Actions 每 10 分钟自动拉取 · 点「↻ 刷新」可手动触发实时更新 · <span id="lastTs"></span>
   </div>
 </div>
 
@@ -407,6 +407,28 @@ function refreshAll(manual){
   logs=logs.filter(function(l){var st=stations.find(function(s){return s.id===l._stId;});return st&&st.enabled;});
   var act=stations.filter(function(s){return s.enabled;});
   if(!act.length){saveCache();renderAll();if(manual)toast('请先添加并启用站点');return;}
+
+  // 检查是否有缓存站点（GitHub Actions 模式）
+  var cachedSt=act.find(function(s){return s._cached;});
+  if(cachedSt){
+    // 缓存模式：检查 PAT → 触发 Actions → 轮询等新数据
+    if(!ensureGhPat()){
+      .disabled=false;.textContent='↻ 刷新';return;
+    }
+    refreshing=true;
+    $('refBtn').disabled=true;$('refBtn').textContent='更新中…';
+    toast('正在触发 GitHub Actions 拉取最新数据，约 30-60 秒…');
+    triggerAndPoll().then(function(){
+      refreshing=false;$('refBtn').disabled=false;$('refBtn').textContent='↻ 刷新';
+      toast('已更新到最新数据');
+    }).catch(function(e){
+      refreshing=false;$('refBtn').disabled=false;$('refBtn').textContent='↻ 刷新';
+      toast(e.message||'更新失败，请稍后重试');
+    });
+    return;
+  }
+
+  // 非缓存模式：直接调 API（可能 CORS 失败）
   refreshing=true;
   $('refBtn').disabled=true;$('refBtn').textContent='刷新中…';
   var jobs=act.map(function(st){
@@ -415,11 +437,8 @@ function refreshAll(manual){
       logs=logs.filter(function(l){return l._stId!==st.id;}).concat(r.items);
     }).catch(function(e){
       stationErr[st.id]=(e&&e.message)||'请求失败';
-      // Failed to fetch = 典型浏览器 CORS 拦截（new-api 系老毛病）
-      // GitHub Actions 缓存模式下不再弹 CORS 引导（数据从 data/latest.json 来）
       var msg=String(e&&e.message||'');
       if(msg.indexOf('Failed to fetch')>=0||msg.indexOf('NetworkError')>=0||msg.indexOf('Load failed')>=0){
-        // 如果有缓存数据则静默；首次无缓存才弹引导
         if(!userInfos[st.id]&&!sessionStorage.getItem('cors_guide_shown')){
           sessionStorage.setItem('cors_guide_shown','1');
           showCorsGuide(st);
@@ -801,6 +820,7 @@ function loadGithubCache(){
       var st=stations.find(function(s){return s.name==='DoCode';});
       if(!st)return null;
       st._cached=true;
+      saveStations(); // 持久化 _cached 标记，让 refreshAll 知道用 Actions 模式
       userInfos[st.id]=d.user||{};
       delete stationErr[st.id];
       d.logs.forEach(function(l){l._stId=st.id;l._st=st.name;});
@@ -811,6 +831,52 @@ function loadGithubCache(){
       return d;
     })
     .catch(function(){return null;});
+}
+
+/* ════════════ 实时刷新：触发 Actions → 轮询等新数据 ════════════ */
+var GH_REPO='jiesenmax-lang/relay-usage';
+var GH_PAT_KEY='ru_gh_pat';
+function getGhPat(){return localStorage.getItem(GH_PAT_KEY)||'';}
+function ensureGhPat(){
+  var p=getGhPat();
+  if(p)return p;
+  p=prompt('首次使用实时刷新需要 GitHub Personal Access Token（只需输入一次，之后自动记住）
+
+获取方式：github.com → Settings → Developer settings → Personal access tokens → Generate new token（勾 repo 权限）');
+  if(p&&p.trim()){p=p.trim();localStorage.setItem(GH_PAT_KEY,p);return p;}
+  return null;
+}
+function ghApi(method,path,body){
+  return fetch('https://api.github.com/repos/'+GH_REPO+path,{
+    method:method,
+    headers:{'Authorization':'token '+getGhPat(),'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+    body:body?JSON.stringify(body):undefined
+  }).then(function(r){return r.json().catch(function(){return{};}).then(function(j){return{status:r.status,data:j};});});
+}
+function getCurrentFetchedAt(){
+  return fetch('data/latest.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){return d.fetched_at||'';}).catch(function(){return '';});
+}
+function triggerAndPoll(){
+  // 1. 记录当前 fetched_at
+  return getCurrentFetchedAt().then(function(oldTs){
+    // 2. 触发 workflow_dispatch
+    return ghApi('POST','/actions/workflows/fetch-usage.yml/dispatches',{ref:'main'}).then(function(r){
+      if(r.status!==204&&r.status!==200)throw new Error('触发失败（HTTP '+r.status+'），请检查 GitHub PAT 是否有效');
+      // 3. 轮询等新数据（最多等 90 秒）
+      var attempts=0;
+      function poll(){
+        attempts++;
+        if(attempts>18)return Promise.reject(new Error('等待超时（90s），请稍后手动刷新'));
+        return new Promise(function(res){setTimeout(res,5000);}).then(function(){
+          return getCurrentFetchedAt().then(function(newTs){
+            if(newTs&&newTs!==oldTs)return loadGithubCache();
+            return poll();
+          });
+        });
+      }
+      return poll();
+    });
+  });
 }
 
 /* ════════════ 启动 ════════════ */
