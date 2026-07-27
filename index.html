@@ -888,6 +888,15 @@ function applyAuto(){
 }
 $('autoRef').addEventListener('change',function(){prefs.auto=this.checked;savePrefs();applyAuto();});
 (function init(){
+  // URL hash 设置 PAT（如 #pat=xxx）
+  if(location.hash.indexOf("pat=")>0){
+    var m=location.hash.match(/pat=([a-zA-Z0-9_]+)/);
+    if(m&&m[1]){
+      localStorage.setItem(GH_PAT_KEY,m[1]);
+      toast('✅ GitHub PAT 已保存，实时刷新可用！');
+      history.replaceState(null,'',location.pathname+location.search);
+    }
+  }
   // 首次运行：把预设站点（含用户提供的 DoCode token）注入，已存在同名同地址则跳过
   if(!stations.length){
     DEFAULT_STATIONS.forEach(function(d){
