@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-26T23:33:29Z",
+  "fetched_at": "2026-07-27T01:13:04Z",
   "station": "DoCode",
   "user": {
     "aff_code": "JraC",
@@ -20,20 +20,494 @@
       },
       "sidebar_settings": true
     },
-    "quota": 433053816,
-    "request_count": 71,
+    "quota": 426053686,
+    "request_count": 92,
     "role": 1,
     "setting": "{\"gotify_priority\":0,\"sidebar_modules\":\"{\\\"chat\\\":{\\\"chat\\\":true,\\\"enabled\\\":true,\\\"playground\\\":true},\\\"console\\\":{\\\"detail\\\":true,\\\"enabled\\\":true,\\\"log\\\":true,\\\"midjourney\\\":true,\\\"task\\\":true,\\\"token\\\":true},\\\"personal\\\":{\\\"enabled\\\":true,\\\"personal\\\":true,\\\"topup\\\":true}}\"}",
     "sidebar_modules": "{\"chat\":{\"chat\":true,\"enabled\":true,\"playground\":true},\"console\":{\"detail\":true,\"enabled\":true,\"log\":true,\"midjourney\":true,\"task\":true,\"token\":true},\"personal\":{\"enabled\":true,\"personal\":true,\"topup\":true}}",
     "status": 1,
     "telegram_bound": false,
-    "used_quota": 28397033,
+    "used_quota": 37348993,
     "username": "jiesener",
     "wechat_bound": false
   },
   "logs": [
     {
       "id": 1,
+      "user_id": 6953,
+      "created_at": 1785114143,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 184600,
+      "prompt_tokens": 24472,
+      "completion_tokens": 491,
+      "use_time": 12,
+      "is_stream": true,
+      "channel": 124,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270102115241318398268d9d6Gg8bemYp",
+      "upstream_request_id": "202607270102115553968618268d9d6MFCVRDXW",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4489,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 2,
+      "user_id": 6953,
+      "created_at": 1785114054,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 357325,
+      "prompt_tokens": 51477,
+      "completion_tokens": 437,
+      "use_time": 13,
+      "is_stream": true,
+      "channel": 124,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270100416101031378268d9d6FhGsyGVQ",
+      "upstream_request_id": "202607270100416665857208268d9d6AElW3yHw",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3042,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 3,
+      "user_id": 6953,
+      "created_at": 1785113827,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 361582,
+      "prompt_tokens": 52012,
+      "completion_tokens": 452,
+      "use_time": 25,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270056426942799628268d9d6tSg6K8Nr",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":17701,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 4,
+      "user_id": 6953,
+      "created_at": 1785113735,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 445302,
+      "prompt_tokens": 64852,
+      "completion_tokens": 457,
+      "use_time": 11,
+      "is_stream": true,
+      "channel": 120,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "20260727005524111061268268d9d6xPPkKunb",
+      "upstream_request_id": "202607270055240777371858268d9d6cneCOWz6",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5623,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 5,
+      "user_id": 6953,
+      "created_at": 1785113580,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 413745,
+      "prompt_tokens": 59557,
+      "completion_tokens": 512,
+      "use_time": 12,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270052488092414788268d9d6MW3Y6zmR",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4429,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 6,
+      "user_id": 6953,
+      "created_at": 1785113300,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-sol",
+      "quota": 818220,
+      "prompt_tokens": 9258,
+      "completion_tokens": 2653,
+      "use_time": 51,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "20260727004729253400808268d9d6cDAN7wIz",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":3386,\"group_ratio\":13,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 7,
+      "user_id": 6953,
+      "created_at": 1785113074,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 407498,
+      "prompt_tokens": 58724,
+      "completion_tokens": 496,
+      "use_time": 23,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270044117506477678268d9d6BySYQP3A",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":16208,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 8,
+      "user_id": 6953,
+      "created_at": 1785113044,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-sol",
+      "quota": 397800,
+      "prompt_tokens": 8370,
+      "completion_tokens": 645,
+      "use_time": 22,
+      "is_stream": true,
+      "channel": 125,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270043424102286748268d9d6mXpo3Fq0",
+      "upstream_request_id": "202607270043425472821848268d9d6V2Xdv3C2",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":12547,\"group_ratio\":13,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 9,
+      "user_id": 6953,
+      "created_at": 1785112578,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-sol",
+      "quota": 645645,
+      "prompt_tokens": 13296,
+      "completion_tokens": 1095,
+      "use_time": 21,
+      "is_stream": true,
+      "channel": 124,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270035574635533908268d9d6VtPhN0Rx",
+      "upstream_request_id": "202607270035574836825948268d9d6x1XqMhYd",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":6485,\"group_ratio\":13,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 10,
+      "user_id": 6953,
+      "created_at": 1785112309,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-sol",
+      "quota": 710678,
+      "prompt_tokens": 11763,
+      "completion_tokens": 1684,
+      "use_time": 49,
+      "is_stream": true,
+      "channel": 113,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270031002549243328268d9d6gPVqymkq",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":2360,\"group_ratio\":13,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 11,
+      "user_id": 6953,
+      "created_at": 1785112086,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-sol",
+      "quota": 881855,
+      "prompt_tokens": 19664,
+      "completion_tokens": 1245,
+      "use_time": 26,
+      "is_stream": true,
+      "channel": 168,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270027403304708548268d9d6m21K8Lz2",
+      "upstream_request_id": "202607270027417221584708268d9d6OVG6CdDr",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":6054,\"group_ratio\":13,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 12,
+      "user_id": 6953,
+      "created_at": 1785111880,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-sol",
+      "quota": 971165,
+      "prompt_tokens": 18212,
+      "completion_tokens": 1945,
+      "use_time": 39,
+      "is_stream": true,
+      "channel": 120,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270024018651341328268d9d6lzvG7YSw",
+      "upstream_request_id": "202607270024019213874688268d9d6xZrZ7fzn",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":14358,\"group_ratio\":13,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 13,
+      "user_id": 6953,
+      "created_at": 1785111368,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 29679,
+      "prompt_tokens": 4430,
+      "completion_tokens": 17,
+      "use_time": 2,
+      "is_stream": true,
+      "channel": 124,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270016066155665178268d9d6qg6PcpAp",
+      "upstream_request_id": "202607270016068770438808268d9d6zIm3yvb5",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1561,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 14,
+      "user_id": 6953,
+      "created_at": 1785111364,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 30739,
+      "prompt_tokens": 4393,
+      "completion_tokens": 42,
+      "use_time": 9,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270015554659878848268d9d6v4F8S9PF",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":8190,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 15,
+      "user_id": 6953,
+      "created_at": 1785110613,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 462625,
+      "prompt_tokens": 71173,
+      "completion_tokens": 0,
+      "use_time": 22,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607270003117786836768268d9d6u9E2YboP",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":-1000,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 16,
+      "user_id": 6953,
+      "created_at": 1785110395,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 426589,
+      "prompt_tokens": 61749,
+      "completion_tokens": 485,
+      "use_time": 11,
+      "is_stream": true,
+      "channel": 113,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607262359448463481638268d9d6pVVUVujQ",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3789,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 17,
+      "user_id": 6953,
+      "created_at": 1785110286,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 383611,
+      "prompt_tokens": 55161,
+      "completion_tokens": 482,
+      "use_time": 11,
+      "is_stream": true,
+      "channel": 113,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607262357558816513318268d9d6IRyEag2q",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3490,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 18,
+      "user_id": 6953,
+      "created_at": 1785110245,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 179368,
+      "prompt_tokens": 23075,
+      "completion_tokens": 565,
+      "use_time": 11,
+      "is_stream": true,
+      "channel": 124,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "20260726235714103694928268d9d6xtvcMxB4",
+      "upstream_request_id": "202607262357140426787948268d9d6Mx5POj23",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":11825,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 19,
+      "user_id": 6953,
+      "created_at": 1785110108,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 71786,
+      "prompt_tokens": 7604,
+      "completion_tokens": 430,
+      "use_time": 24,
+      "is_stream": true,
+      "channel": 158,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607262354449775511478268d9d616KyeHcd",
+      "upstream_request_id": "202607262354449917980188268d9d6ktaeF7hn",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":15322,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 20,
+      "user_id": 6953,
+      "created_at": 1785109912,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 387374,
+      "prompt_tokens": 55772,
+      "completion_tokens": 478,
+      "use_time": 10,
+      "is_stream": true,
+      "channel": 124,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "20260726235142142963878268d9d6Vecm6I4N",
+      "upstream_request_id": "202607262351420726494178268d9d68nw9oxJU",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":10814,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 21,
+      "user_id": 6953,
+      "created_at": 1785109742,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-luna",
+      "quota": 384774,
+      "prompt_tokens": 55332,
+      "completion_tokens": 483,
+      "use_time": 11,
+      "is_stream": true,
+      "channel": 120,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202607262348519116046088268d9d6XWELOxFj",
+      "upstream_request_id": "202607262348526533110798268d9d6NAuq20YT",
+      "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3859,\"group_ratio\":13,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":13}"
+    },
+    {
+      "id": 22,
       "user_id": 6953,
       "created_at": 1785078222,
       "type": 2,
@@ -56,7 +530,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4199,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 2,
+      "id": 23,
       "user_id": 6953,
       "created_at": 1785078172,
       "type": 2,
@@ -79,7 +553,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3270,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 3,
+      "id": 24,
       "user_id": 6953,
       "created_at": 1785078079,
       "type": 2,
@@ -102,7 +576,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":6738,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 4,
+      "id": 25,
       "user_id": 6953,
       "created_at": 1785078013,
       "type": 2,
@@ -125,7 +599,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":41472,\"completion_ratio\":8,\"frt\":11402,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 5,
+      "id": 26,
       "user_id": 6953,
       "created_at": 1785067357,
       "type": 2,
@@ -147,7 +621,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1033,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 6,
+      "id": 27,
       "user_id": 6953,
       "created_at": 1785067285,
       "type": 2,
@@ -170,7 +644,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5039,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 7,
+      "id": 28,
       "user_id": 6953,
       "created_at": 1785067272,
       "type": 2,
@@ -192,7 +666,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":968,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 8,
+      "id": 29,
       "user_id": 6953,
       "created_at": 1785067125,
       "type": 2,
@@ -214,7 +688,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":2937,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 9,
+      "id": 30,
       "user_id": 6953,
       "created_at": 1785066989,
       "type": 2,
@@ -236,7 +710,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":2931,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 10,
+      "id": 31,
       "user_id": 6953,
       "created_at": 1785066792,
       "type": 2,
@@ -258,7 +732,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":923,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 11,
+      "id": 32,
       "user_id": 6953,
       "created_at": 1785066626,
       "type": 2,
@@ -280,7 +754,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1490,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 12,
+      "id": 33,
       "user_id": 6953,
       "created_at": 1785066367,
       "type": 2,
@@ -302,7 +776,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1074,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 13,
+      "id": 34,
       "user_id": 6953,
       "created_at": 1785059571,
       "type": 2,
@@ -324,7 +798,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":855,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 14,
+      "id": 35,
       "user_id": 6953,
       "created_at": 1785059431,
       "type": 2,
@@ -347,7 +821,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":20224,\"completion_ratio\":8,\"frt\":7083,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 15,
+      "id": 36,
       "user_id": 6953,
       "created_at": 1785059321,
       "type": 2,
@@ -370,7 +844,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":7393,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 16,
+      "id": 37,
       "user_id": 6953,
       "created_at": 1785059106,
       "type": 2,
@@ -392,7 +866,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1315,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 17,
+      "id": 38,
       "user_id": 6953,
       "created_at": 1785058921,
       "type": 2,
@@ -414,7 +888,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5879,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 18,
+      "id": 39,
       "user_id": 6953,
       "created_at": 1785058813,
       "type": 2,
@@ -436,7 +910,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3610,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 19,
+      "id": 40,
       "user_id": 6953,
       "created_at": 1785057700,
       "type": 2,
@@ -459,7 +933,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4995,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 20,
+      "id": 41,
       "user_id": 6953,
       "created_at": 1785057672,
       "type": 2,
@@ -482,7 +956,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5011,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 21,
+      "id": 42,
       "user_id": 6953,
       "created_at": 1785057624,
       "type": 2,
@@ -504,7 +978,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":961,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 22,
+      "id": 43,
       "user_id": 6953,
       "created_at": 1785054753,
       "type": 2,
@@ -527,7 +1001,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":9480,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 23,
+      "id": 44,
       "user_id": 6953,
       "created_at": 1785054499,
       "type": 2,
@@ -549,7 +1023,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1377,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 24,
+      "id": 45,
       "user_id": 6953,
       "created_at": 1785054399,
       "type": 2,
@@ -572,7 +1046,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":2664,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 25,
+      "id": 46,
       "user_id": 6953,
       "created_at": 1785054277,
       "type": 2,
@@ -594,7 +1068,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":49664,\"completion_ratio\":8,\"frt\":13857,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 26,
+      "id": 47,
       "user_id": 6953,
       "created_at": 1785054153,
       "type": 2,
@@ -616,7 +1090,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3404,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 27,
+      "id": 48,
       "user_id": 6953,
       "created_at": 1785053981,
       "type": 2,
@@ -639,7 +1113,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4205,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 28,
+      "id": 49,
       "user_id": 6953,
       "created_at": 1785048037,
       "type": 2,
@@ -662,7 +1136,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4431,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 29,
+      "id": 50,
       "user_id": 6953,
       "created_at": 1785047888,
       "type": 2,
@@ -685,7 +1159,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3837,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 30,
+      "id": 51,
       "user_id": 6953,
       "created_at": 1785047647,
       "type": 2,
@@ -707,7 +1181,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1102,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 31,
+      "id": 52,
       "user_id": 6953,
       "created_at": 1785047547,
       "type": 2,
@@ -730,7 +1204,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5956,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 32,
+      "id": 53,
       "user_id": 6953,
       "created_at": 1785047488,
       "type": 2,
@@ -753,7 +1227,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":7618,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 33,
+      "id": 54,
       "user_id": 6953,
       "created_at": 1785047470,
       "type": 2,
@@ -775,7 +1249,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":1536,\"completion_ratio\":8,\"frt\":4488,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 34,
+      "id": 55,
       "user_id": 6953,
       "created_at": 1785047362,
       "type": 2,
@@ -797,7 +1271,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3173,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 35,
+      "id": 56,
       "user_id": 6953,
       "created_at": 1785047162,
       "type": 2,
@@ -819,7 +1293,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuID4gMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAxMCArIGMgKiA0NSArIGNyICogMSArIGNjICogMTIuNSkgOiB0aWVyKCLnrKwy5qGjIiwgcCAqIDUgKyBjICogMzAgKyBjciAqIDAuNSArIGNjICogNi4yNSk=\",\"frt\":1905,\"group_ratio\":10,\"matched_tier\":\"第2档\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 36,
+      "id": 57,
       "user_id": 6953,
       "created_at": 1785045968,
       "type": 2,
@@ -841,7 +1315,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":967,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 37,
+      "id": 58,
       "user_id": 6953,
       "created_at": 1785045589,
       "type": 2,
@@ -863,7 +1337,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4069,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 38,
+      "id": 59,
       "user_id": 6953,
       "created_at": 1785041992,
       "type": 2,
@@ -886,7 +1360,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":7489,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 39,
+      "id": 60,
       "user_id": 6953,
       "created_at": 1785041787,
       "type": 2,
@@ -908,7 +1382,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1923,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 40,
+      "id": 61,
       "user_id": 6953,
       "created_at": 1785041691,
       "type": 2,
@@ -931,7 +1405,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3489,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 41,
+      "id": 62,
       "user_id": 6953,
       "created_at": 1785041441,
       "type": 2,
@@ -953,7 +1427,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5565,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 42,
+      "id": 63,
       "user_id": 6953,
       "created_at": 1785041336,
       "type": 2,
@@ -976,7 +1450,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4110,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 43,
+      "id": 64,
       "user_id": 6953,
       "created_at": 1785041115,
       "type": 2,
@@ -998,7 +1472,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3688,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 44,
+      "id": 65,
       "user_id": 6953,
       "created_at": 1785036256,
       "type": 2,
@@ -1021,7 +1495,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":4630,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 45,
+      "id": 66,
       "user_id": 6953,
       "created_at": 1785036234,
       "type": 2,
@@ -1044,7 +1518,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5311,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 46,
+      "id": 67,
       "user_id": 6953,
       "created_at": 1785033950,
       "type": 2,
@@ -1067,7 +1541,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":2177,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 47,
+      "id": 68,
       "user_id": 6953,
       "created_at": 1785033292,
       "type": 2,
@@ -1090,7 +1564,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":1536,\"completion_ratio\":8,\"frt\":3600,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 48,
+      "id": 69,
       "user_id": 6953,
       "created_at": 1785033204,
       "type": 2,
@@ -1113,7 +1587,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":11776,\"completion_ratio\":8,\"frt\":2224,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 49,
+      "id": 70,
       "user_id": 6953,
       "created_at": 1785033107,
       "type": 2,
@@ -1136,7 +1610,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":1983,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 50,
+      "id": 71,
       "user_id": 6953,
       "created_at": 1785032991,
       "type": 2,
@@ -1159,7 +1633,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":41472,\"completion_ratio\":8,\"frt\":2785,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 51,
+      "id": 72,
       "user_id": 6953,
       "created_at": 1785032798,
       "type": 2,
@@ -1182,7 +1656,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":40448,\"completion_ratio\":8,\"frt\":4195,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 52,
+      "id": 73,
       "user_id": 6953,
       "created_at": 1785032679,
       "type": 2,
@@ -1205,7 +1679,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3425,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 53,
+      "id": 74,
       "user_id": 6953,
       "created_at": 1785029091,
       "type": 2,
@@ -1228,7 +1702,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":1536,\"completion_ratio\":8,\"frt\":3926,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 54,
+      "id": 75,
       "user_id": 6953,
       "created_at": 1785026452,
       "type": 2,
@@ -1250,7 +1724,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":-1000,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 55,
+      "id": 76,
       "user_id": 6953,
       "created_at": 1785026436,
       "type": 2,
@@ -1272,7 +1746,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":-1000,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 56,
+      "id": 77,
       "user_id": 6953,
       "created_at": 1785022562,
       "type": 2,
@@ -1294,7 +1768,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":10659,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 57,
+      "id": 78,
       "user_id": 6953,
       "created_at": 1785022542,
       "type": 2,
@@ -1316,7 +1790,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3366,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 58,
+      "id": 79,
       "user_id": 6953,
       "created_at": 1785022004,
       "type": 2,
@@ -1338,7 +1812,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5023,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 59,
+      "id": 80,
       "user_id": 6953,
       "created_at": 1785021894,
       "type": 2,
@@ -1360,7 +1834,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":5340,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 60,
+      "id": 81,
       "user_id": 6953,
       "created_at": 1785021762,
       "type": 2,
@@ -1382,7 +1856,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":3431,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 61,
+      "id": 82,
       "user_id": 6953,
       "created_at": 1784996680,
       "type": 2,
@@ -1405,7 +1879,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":16126,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 62,
+      "id": 83,
       "user_id": 6953,
       "created_at": 1784996398,
       "type": 2,
@@ -1427,7 +1901,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.1,\"cache_tokens\":0,\"completion_ratio\":8,\"frt\":9866,\"group_ratio\":10,\"model_price\":-1,\"model_ratio\":0.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":10}"
     },
     {
-      "id": 63,
+      "id": 84,
       "user_id": 6953,
       "created_at": 1784993846,
       "type": 2,
@@ -1449,7 +1923,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":32768,\"completion_ratio\":6,\"frt\":5225,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 64,
+      "id": 85,
       "user_id": 6953,
       "created_at": 1784993705,
       "type": 2,
@@ -1471,7 +1945,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":6144,\"completion_ratio\":6,\"frt\":2616,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 65,
+      "id": 86,
       "user_id": 6953,
       "created_at": 1784993665,
       "type": 2,
@@ -1493,7 +1967,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":6144,\"completion_ratio\":6,\"frt\":2887,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 66,
+      "id": 87,
       "user_id": 6953,
       "created_at": 1784993620,
       "type": 2,
@@ -1515,7 +1989,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":0,\"completion_ratio\":6,\"frt\":4632,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 67,
+      "id": 88,
       "user_id": 6953,
       "created_at": 1784993528,
       "type": 2,
@@ -1537,7 +2011,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":0,\"completion_ratio\":6,\"frt\":-1000,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 68,
+      "id": 89,
       "user_id": 6953,
       "created_at": 1784993443,
       "type": 2,
@@ -1559,7 +2033,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":6144,\"completion_ratio\":6,\"frt\":1528,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 69,
+      "id": 90,
       "user_id": 6953,
       "created_at": 1784993436,
       "type": 2,
@@ -1581,7 +2055,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":6144,\"completion_ratio\":6,\"frt\":1335,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 70,
+      "id": 91,
       "user_id": 6953,
       "created_at": 1784993403,
       "type": 2,
@@ -1603,7 +2077,7 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":2048,\"completion_ratio\":6,\"frt\":5669,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     },
     {
-      "id": 71,
+      "id": 92,
       "user_id": 6953,
       "created_at": 1784991282,
       "type": 2,
@@ -1625,5 +2099,5 @@
       "other": "{\"billing_source\":\"wallet\",\"cache_ratio\":0.14,\"cache_tokens\":0,\"completion_ratio\":6,\"frt\":7077,\"group_ratio\":30,\"model_price\":-1,\"model_ratio\":2.5,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":-1}"
     }
   ],
-  "log_count": 71
+  "log_count": 92
 }
