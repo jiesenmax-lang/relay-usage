@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T12:42:30Z",
+  "fetched_at": "2026-08-01T14:14:26Z",
   "station": "DoCode",
   "user": {
     "aff_code": "JraC",
@@ -20,7 +20,7 @@
       },
       "sidebar_settings": true
     },
-    "quota": 514573227,
+    "quota": 554573227,
     "request_count": 623,
     "role": 1,
     "setting": "{\"gotify_priority\":0,\"sidebar_modules\":\"{\\\"chat\\\":{\\\"chat\\\":true,\\\"enabled\\\":true,\\\"playground\\\":true},\\\"console\\\":{\\\"detail\\\":true,\\\"enabled\\\":true,\\\"log\\\":true,\\\"midjourney\\\":true,\\\"task\\\":true,\\\"token\\\":true},\\\"personal\\\":{\\\"enabled\\\":true,\\\"personal\\\":true,\\\"topup\\\":true}}\"}",
