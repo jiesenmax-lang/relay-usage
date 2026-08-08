@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-08-08T04:44:45Z",
+  "fetched_at": "2026-08-08T05:27:37Z",
   "station": "DoCode",
   "user": {
     "aff_code": "JraC",
     "aff_count": 0,
     "aff_history_quota": 330000000,
-    "aff_quota": 60000000,
+    "aff_quota": 0,
     "discord_bound": false,
     "display_name": "jiesener",
     "email": "501488257@qq.com",
@@ -20,7 +20,7 @@
       },
       "sidebar_settings": true
     },
-    "quota": 843185347,
+    "quota": 903185347,
     "request_count": 999,
     "role": 1,
     "setting": "{\"gotify_priority\":0,\"sidebar_modules\":\"{\\\"chat\\\":{\\\"chat\\\":true,\\\"enabled\\\":true,\\\"playground\\\":true},\\\"console\\\":{\\\"detail\\\":true,\\\"enabled\\\":true,\\\"log\\\":true,\\\"midjourney\\\":true,\\\"task\\\":true,\\\"token\\\":true},\\\"personal\\\":{\\\"enabled\\\":true,\\\"personal\\\":true,\\\"topup\\\":true}}\"}",
