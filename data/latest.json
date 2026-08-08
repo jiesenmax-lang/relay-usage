@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-08-08T03:53:17Z",
+  "fetched_at": "2026-08-08T04:44:45Z",
   "station": "DoCode",
   "user": {
     "aff_code": "JraC",
     "aff_count": 0,
-    "aff_history_quota": 270000000,
-    "aff_quota": 0,
+    "aff_history_quota": 330000000,
+    "aff_quota": 60000000,
     "discord_bound": false,
     "display_name": "jiesener",
     "email": "501488257@qq.com",
