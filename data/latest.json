@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-19T13:58:33Z",
+  "fetched_at": "2026-10-19T19:38:03Z",
   "station": "DoCode",
   "user": {
     "aff_code": "JraC",
@@ -1528,52 +1528,7 @@
       "request_id": "202609192353352192314688268d9d6fw4GSzO0",
       "upstream_request_id": "202609192353352402814138268d9d6pHWItpZM",
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDQp\",\"frt\":3007,\"group_ratio\":12,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":12}"
-    },
-    {
-      "id": 68,
-      "user_id": 6953,
-      "created_at": 1789827131,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 330750,
-      "prompt_tokens": 17682,
-      "completion_tokens": 728,
-      "use_time": 14,
-      "is_stream": true,
-      "channel": 230,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202609191411572404631848268d9d6AXYetUdF",
-      "upstream_request_id": "202609191411572663639898268d9d6x6ta0GmU",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDQp\",\"frt\":8576,\"group_ratio\":12,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":12}"
-    },
-    {
-      "id": 69,
-      "user_id": 6953,
-      "created_at": 1789826995,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 278910,
-      "prompt_tokens": 16116,
-      "completion_tokens": 413,
-      "use_time": 15,
-      "is_stream": true,
-      "channel": 226,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202609191409404278722438268d9d6DMbFpOk4",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDQp\",\"frt\":1825,\"group_ratio\":12,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":12}"
     }
   ],
-  "log_count": 69
+  "log_count": 67
 }
