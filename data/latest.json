@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-07T08:39:37Z",
+  "fetched_at": "2026-11-07T15:05:54Z",
   "station": "DoCode",
   "user": {
     "aff_code": "JraC",
@@ -20,14 +20,14 @@
       },
       "sidebar_settings": true
     },
-    "quota": 370725769,
-    "request_count": 2663,
+    "quota": 370002091,
+    "request_count": 2668,
     "role": 1,
     "setting": "{\"gotify_priority\":0,\"sidebar_modules\":\"{\\\"chat\\\":{\\\"chat\\\":true,\\\"enabled\\\":true,\\\"playground\\\":true},\\\"console\\\":{\\\"detail\\\":true,\\\"enabled\\\":true,\\\"log\\\":true,\\\"midjourney\\\":true,\\\"task\\\":true,\\\"token\\\":true},\\\"personal\\\":{\\\"enabled\\\":true,\\\"personal\\\":true,\\\"topup\\\":true}}\"}",
     "sidebar_modules": "{\"chat\":{\"chat\":true,\"enabled\":true,\"playground\":true},\"console\":{\"detail\":true,\"enabled\":true,\"log\":true,\"midjourney\":true,\"task\":true,\"token\":true},\"personal\":{\"enabled\":true,\"personal\":true,\"topup\":true}}",
     "status": 1,
     "telegram_bound": false,
-    "used_quota": 1158706574,
+    "used_quota": 1159430252,
     "username": "jiesener",
     "wechat_bound": false
   },
@@ -35,6 +35,116 @@
     {
       "id": 1,
       "user_id": 6953,
+      "created_at": 1794060352,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 94275,
+      "prompt_tokens": 12540,
+      "completion_tokens": 5,
+      "use_time": 9,
+      "is_stream": false,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071405438841477498268d9d66WTlYjfp",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 2,
+      "user_id": 6953,
+      "created_at": 1794060340,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 122215,
+      "prompt_tokens": 27365,
+      "completion_tokens": 596,
+      "use_time": 32,
+      "is_stream": true,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071405089513360148268d9d686Rv3Kcb",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16273,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1092,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 3,
+      "user_id": 6953,
+      "created_at": 1794060295,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 178575,
+      "prompt_tokens": 23810,
+      "completion_tokens": 0,
+      "use_time": 2,
+      "is_stream": true,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071404539228951818268d9d6qdKId3jn",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 4,
+      "user_id": 6953,
+      "created_at": 1794060264,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 99015,
+      "prompt_tokens": 13172,
+      "completion_tokens": 5,
+      "use_time": 8,
+      "is_stream": false,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071404163983063548268d9d6yooCjrX3",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 5,
+      "user_id": 6953,
+      "created_at": 1794060252,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 229598,
+      "prompt_tokens": 26563,
+      "completion_tokens": 675,
+      "use_time": 36,
+      "is_stream": true,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071403368646889018268d9d6JVwvHhq7",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1202,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 6,
+      "user_id": 6953,
       "created_at": 1794036248,
       "type": 2,
       "content": "",
@@ -55,7 +165,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1171,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 2,
+      "id": 7,
       "user_id": 6953,
       "created_at": 1794029308,
       "type": 2,
@@ -77,7 +187,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20480,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2423,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 3,
+      "id": 8,
       "user_id": 6953,
       "created_at": 1793926500,
       "type": 2,
@@ -99,7 +209,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20291,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":4189,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 4,
+      "id": 9,
       "user_id": 6953,
       "created_at": 1793926408,
       "type": 2,
@@ -121,7 +231,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1940,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 5,
+      "id": 10,
       "user_id": 6953,
       "created_at": 1793859590,
       "type": 2,
@@ -143,7 +253,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":807,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 6,
+      "id": 11,
       "user_id": 6953,
       "created_at": 1793855047,
       "type": 2,
@@ -165,7 +275,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1600,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 7,
+      "id": 12,
       "user_id": 6953,
       "created_at": 1793841967,
       "type": 2,
@@ -187,7 +297,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":829,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 8,
+      "id": 13,
       "user_id": 6953,
       "created_at": 1793841934,
       "type": 2,
@@ -209,7 +319,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1048,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 9,
+      "id": 14,
       "user_id": 6953,
       "created_at": 1793841522,
       "type": 2,
@@ -231,7 +341,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":11648,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1476,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 10,
+      "id": 15,
       "user_id": 6953,
       "created_at": 1793779948,
       "type": 2,
@@ -253,7 +363,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1326,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 11,
+      "id": 16,
       "user_id": 6953,
       "created_at": 1793698420,
       "type": 2,
@@ -275,7 +385,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1709,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 12,
+      "id": 17,
       "user_id": 6953,
       "created_at": 1793691033,
       "type": 2,
@@ -297,7 +407,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1255,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 13,
+      "id": 18,
       "user_id": 6953,
       "created_at": 1793683907,
       "type": 2,
@@ -319,7 +429,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":7292,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 14,
+      "id": 19,
       "user_id": 6953,
       "created_at": 1793683040,
       "type": 2,
@@ -341,7 +451,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":5237,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 15,
+      "id": 20,
       "user_id": 6953,
       "created_at": 1793665493,
       "type": 2,
@@ -363,7 +473,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 16,
+      "id": 21,
       "user_id": 6953,
       "created_at": 1793665483,
       "type": 2,
@@ -385,7 +495,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":5120,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1313,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 17,
+      "id": 22,
       "user_id": 6953,
       "created_at": 1793664431,
       "type": 2,
@@ -407,7 +517,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":17152,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 18,
+      "id": 23,
       "user_id": 6953,
       "created_at": 1793664428,
       "type": 2,
@@ -429,7 +539,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":14080,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 19,
+      "id": 24,
       "user_id": 6953,
       "created_at": 1793664424,
       "type": 2,
@@ -451,7 +561,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 20,
+      "id": 25,
       "user_id": 6953,
       "created_at": 1793664385,
       "type": 2,
@@ -473,7 +583,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1637,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 21,
+      "id": 26,
       "user_id": 6953,
       "created_at": 1793620191,
       "type": 2,
@@ -495,7 +605,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1577,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 22,
+      "id": 27,
       "user_id": 6953,
       "created_at": 1793603155,
       "type": 2,
@@ -517,7 +627,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":15133,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 23,
+      "id": 28,
       "user_id": 6953,
       "created_at": 1793599966,
       "type": 2,
@@ -539,7 +649,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":28288,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1943,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 24,
+      "id": 29,
       "user_id": 6953,
       "created_at": 1793599848,
       "type": 2,
@@ -561,7 +671,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":783,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 25,
+      "id": 30,
       "user_id": 6953,
       "created_at": 1793597238,
       "type": 2,
@@ -583,7 +693,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1767,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 26,
+      "id": 31,
       "user_id": 6953,
       "created_at": 1793595190,
       "type": 2,
@@ -605,7 +715,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":23424,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1385,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 27,
+      "id": 32,
       "user_id": 6953,
       "created_at": 1793595182,
       "type": 2,
@@ -627,7 +737,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20224,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1829,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 28,
+      "id": 33,
       "user_id": 6953,
       "created_at": 1793595179,
       "type": 2,
@@ -649,7 +759,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20224,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1682,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 29,
+      "id": 34,
       "user_id": 6953,
       "created_at": 1793595175,
       "type": 2,
@@ -671,7 +781,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":19968,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1647,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 30,
+      "id": 35,
       "user_id": 6953,
       "created_at": 1793595166,
       "type": 2,
@@ -693,7 +803,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":19200,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2001,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 31,
+      "id": 36,
       "user_id": 6953,
       "created_at": 1793595117,
       "type": 2,
@@ -715,7 +825,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 32,
+      "id": 37,
       "user_id": 6953,
       "created_at": 1793595109,
       "type": 2,
@@ -737,7 +847,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":18432,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1054,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 33,
+      "id": 38,
       "user_id": 6953,
       "created_at": 1793594281,
       "type": 2,
@@ -759,7 +869,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2019,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 34,
+      "id": 39,
       "user_id": 6953,
       "created_at": 1793593639,
       "type": 2,
@@ -781,7 +891,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":8580,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 35,
+      "id": 40,
       "user_id": 6953,
       "created_at": 1793593636,
       "type": 2,
@@ -803,7 +913,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 36,
+      "id": 41,
       "user_id": 6953,
       "created_at": 1793593634,
       "type": 2,
@@ -825,7 +935,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 37,
+      "id": 42,
       "user_id": 6953,
       "created_at": 1793593630,
       "type": 2,
@@ -847,7 +957,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1995,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 38,
+      "id": 43,
       "user_id": 6953,
       "created_at": 1793588955,
       "type": 2,
@@ -869,7 +979,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1794,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 39,
+      "id": 44,
       "user_id": 6953,
       "created_at": 1793587043,
       "type": 2,
@@ -891,7 +1001,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16351,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":875,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 40,
+      "id": 45,
       "user_id": 6953,
       "created_at": 1793586759,
       "type": 2,
@@ -913,7 +1023,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":831,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 41,
+      "id": 46,
       "user_id": 6953,
       "created_at": 1793584653,
       "type": 2,
@@ -935,7 +1045,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":12544,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 42,
+      "id": 47,
       "user_id": 6953,
       "created_at": 1793584650,
       "type": 2,
@@ -957,7 +1067,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":12544,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 43,
+      "id": 48,
       "user_id": 6953,
       "created_at": 1793584644,
       "type": 2,
@@ -979,7 +1089,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 44,
+      "id": 49,
       "user_id": 6953,
       "created_at": 1793584638,
       "type": 2,
@@ -1001,7 +1111,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":1574,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1529,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 45,
+      "id": 50,
       "user_id": 6953,
       "created_at": 1793584549,
       "type": 2,
@@ -1023,7 +1133,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 46,
+      "id": 51,
       "user_id": 6953,
       "created_at": 1793584545,
       "type": 2,
@@ -1045,7 +1155,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 47,
+      "id": 52,
       "user_id": 6953,
       "created_at": 1793584515,
       "type": 2,
@@ -1067,7 +1177,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20006,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":671,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 48,
+      "id": 53,
       "user_id": 6953,
       "created_at": 1793579746,
       "type": 2,
@@ -1089,7 +1199,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":2785,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 49,
+      "id": 54,
       "user_id": 6953,
       "created_at": 1793579738,
       "type": 2,
@@ -1111,7 +1221,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":11947,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1168,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 50,
+      "id": 55,
       "user_id": 6953,
       "created_at": 1793579280,
       "type": 2,
@@ -1133,7 +1243,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 51,
+      "id": 56,
       "user_id": 6953,
       "created_at": 1793579274,
       "type": 2,
@@ -1155,7 +1265,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1152,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 52,
+      "id": 57,
       "user_id": 6953,
       "created_at": 1793579207,
       "type": 2,
@@ -1177,7 +1287,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 53,
+      "id": 58,
       "user_id": 6953,
       "created_at": 1793579198,
       "type": 2,
@@ -1199,7 +1309,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1251,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 54,
+      "id": 59,
       "user_id": 6953,
       "created_at": 1793578290,
       "type": 2,
@@ -1221,7 +1331,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 55,
+      "id": 60,
       "user_id": 6953,
       "created_at": 1793578284,
       "type": 2,
@@ -1243,7 +1353,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":36953,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 56,
+      "id": 61,
       "user_id": 6953,
       "created_at": 1793578282,
       "type": 2,
@@ -1265,7 +1375,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 57,
+      "id": 62,
       "user_id": 6953,
       "created_at": 1793578277,
       "type": 2,
@@ -1287,7 +1397,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1623,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 58,
+      "id": 63,
       "user_id": 6953,
       "created_at": 1793542196,
       "type": 2,
@@ -1309,7 +1419,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1839,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 59,
+      "id": 64,
       "user_id": 6953,
       "created_at": 1793537574,
       "type": 2,
@@ -1331,7 +1441,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":13582,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1011,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 60,
+      "id": 65,
       "user_id": 6953,
       "created_at": 1793537524,
       "type": 2,
@@ -1353,7 +1463,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":13096,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":12333,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 61,
+      "id": 66,
       "user_id": 6953,
       "created_at": 1793535574,
       "type": 2,
@@ -1375,7 +1485,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1495,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 62,
+      "id": 67,
       "user_id": 6953,
       "created_at": 1793533031,
       "type": 2,
@@ -1397,7 +1507,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1618,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 63,
+      "id": 68,
       "user_id": 6953,
       "created_at": 1793531037,
       "type": 2,
@@ -1419,7 +1529,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":876,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 64,
+      "id": 69,
       "user_id": 6953,
       "created_at": 1793526654,
       "type": 2,
@@ -1441,7 +1551,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":972,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 65,
+      "id": 70,
       "user_id": 6953,
       "created_at": 1793524632,
       "type": 2,
@@ -1463,7 +1573,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 66,
+      "id": 71,
       "user_id": 6953,
       "created_at": 1793524598,
       "type": 2,
@@ -1485,7 +1595,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 67,
+      "id": 72,
       "user_id": 6953,
       "created_at": 1793521462,
       "type": 2,
@@ -1507,7 +1617,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":14029,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1103,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 68,
+      "id": 73,
       "user_id": 6953,
       "created_at": 1793520838,
       "type": 2,
@@ -1529,7 +1639,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":977,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 69,
+      "id": 74,
       "user_id": 6953,
       "created_at": 1793520376,
       "type": 2,
@@ -1551,7 +1661,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":786,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 70,
+      "id": 75,
       "user_id": 6953,
       "created_at": 1793520163,
       "type": 2,
@@ -1573,7 +1683,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2008,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 71,
+      "id": 76,
       "user_id": 6953,
       "created_at": 1793519389,
       "type": 2,
@@ -1595,7 +1705,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 72,
+      "id": 77,
       "user_id": 6953,
       "created_at": 1793519384,
       "type": 2,
@@ -1617,7 +1727,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1206,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 73,
+      "id": 78,
       "user_id": 6953,
       "created_at": 1793518734,
       "type": 2,
@@ -1639,7 +1749,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 74,
+      "id": 79,
       "user_id": 6953,
       "created_at": 1793518727,
       "type": 2,
@@ -1661,7 +1771,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1170,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 75,
+      "id": 80,
       "user_id": 6953,
       "created_at": 1793518600,
       "type": 2,
@@ -1683,7 +1793,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":2533,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 76,
+      "id": 81,
       "user_id": 6953,
       "created_at": 1793518593,
       "type": 2,
@@ -1705,7 +1815,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1782,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 77,
+      "id": 82,
       "user_id": 6953,
       "created_at": 1793518584,
       "type": 2,
@@ -1727,7 +1837,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":4864,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 78,
+      "id": 83,
       "user_id": 6953,
       "created_at": 1793518581,
       "type": 2,
@@ -1749,7 +1859,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 79,
+      "id": 84,
       "user_id": 6953,
       "created_at": 1793513317,
       "type": 2,
@@ -1771,7 +1881,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 80,
+      "id": 85,
       "user_id": 6953,
       "created_at": 1793513308,
       "type": 2,
@@ -1793,7 +1903,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":11264,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1615,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 81,
+      "id": 86,
       "user_id": 6953,
       "created_at": 1793513230,
       "type": 2,
@@ -1815,7 +1925,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 82,
+      "id": 87,
       "user_id": 6953,
       "created_at": 1793513223,
       "type": 2,
@@ -1837,7 +1947,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":938,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 83,
+      "id": 88,
       "user_id": 6953,
       "created_at": 1793510023,
       "type": 2,
@@ -1859,7 +1969,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2014,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 84,
+      "id": 89,
       "user_id": 6953,
       "created_at": 1793509564,
       "type": 2,
@@ -1881,7 +1991,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1820,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 85,
+      "id": 90,
       "user_id": 6953,
       "created_at": 1793509487,
       "type": 2,
@@ -1903,7 +2013,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 86,
+      "id": 91,
       "user_id": 6953,
       "created_at": 1793509478,
       "type": 2,
@@ -1925,7 +2035,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16632,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1161,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 87,
+      "id": 92,
       "user_id": 6953,
       "created_at": 1793509406,
       "type": 2,
@@ -1947,7 +2057,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":4864,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 88,
+      "id": 93,
       "user_id": 6953,
       "created_at": 1793509397,
       "type": 2,
@@ -1969,7 +2079,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16016,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1363,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 89,
+      "id": 94,
       "user_id": 6953,
       "created_at": 1793507398,
       "type": 2,
@@ -1991,7 +2101,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1579,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 90,
+      "id": 95,
       "user_id": 6953,
       "created_at": 1793506733,
       "type": 2,
@@ -2013,7 +2123,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 91,
+      "id": 96,
       "user_id": 6953,
       "created_at": 1793506725,
       "type": 2,
@@ -2035,7 +2145,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1529,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 92,
+      "id": 97,
       "user_id": 6953,
       "created_at": 1793493614,
       "type": 2,
@@ -2057,7 +2167,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 93,
+      "id": 98,
       "user_id": 6953,
       "created_at": 1793493601,
       "type": 2,
@@ -2079,7 +2189,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":947,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 94,
+      "id": 99,
       "user_id": 6953,
       "created_at": 1793491956,
       "type": 2,
@@ -2101,7 +2211,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 95,
+      "id": 100,
       "user_id": 6953,
       "created_at": 1793491948,
       "type": 2,
@@ -2121,120 +2231,120 @@
       "ip": "",
       "request_id": "202611010012151466642438268d9d6jTFBdEKP",
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":648,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 96,
-      "user_id": 6953,
-      "created_at": 1793441312,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 156105,
-      "prompt_tokens": 13510,
-      "completion_tokens": 61,
-      "use_time": 5,
-      "is_stream": false,
-      "channel": 212,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610311008274826888718268d9d6xjGh2Jf3",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 97,
-      "user_id": 6953,
-      "created_at": 1793441273,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 306101,
-      "prompt_tokens": 24977,
-      "completion_tokens": 372,
-      "use_time": 15,
-      "is_stream": true,
-      "channel": 212,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610311007383943128428268d9d6sD1NqoJI",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1406,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 98,
-      "user_id": 6953,
-      "created_at": 1793366120,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 286571,
-      "prompt_tokens": 22593,
-      "completion_tokens": 480,
-      "use_time": 9,
-      "is_stream": true,
-      "channel": 443,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610301315117327829358268d9d6194QwjJN",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":3645,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 99,
-      "user_id": 6953,
-      "created_at": 1793338670,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 279473,
-      "prompt_tokens": 21722,
-      "completion_tokens": 520,
-      "use_time": 14,
-      "is_stream": true,
-      "channel": 443,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610300537366122197378268d9d6yCN8hrwc",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1568,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 100,
-      "user_id": 6953,
-      "created_at": 1793336898,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 325744,
-      "prompt_tokens": 26675,
-      "completion_tokens": 380,
-      "use_time": 6,
-      "is_stream": true,
-      "channel": 443,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610300508128026152158268d9d6o9Z7EdM5",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1461,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
       "id": 1,
       "user_id": 6953,
+      "created_at": 1794060352,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 94275,
+      "prompt_tokens": 12540,
+      "completion_tokens": 5,
+      "use_time": 9,
+      "is_stream": false,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071405438841477498268d9d66WTlYjfp",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 2,
+      "user_id": 6953,
+      "created_at": 1794060340,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 122215,
+      "prompt_tokens": 27365,
+      "completion_tokens": 596,
+      "use_time": 32,
+      "is_stream": true,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071405089513360148268d9d686Rv3Kcb",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16273,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1092,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 3,
+      "user_id": 6953,
+      "created_at": 1794060295,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 178575,
+      "prompt_tokens": 23810,
+      "completion_tokens": 0,
+      "use_time": 2,
+      "is_stream": true,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071404539228951818268d9d6qdKId3jn",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 4,
+      "user_id": 6953,
+      "created_at": 1794060264,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 99015,
+      "prompt_tokens": 13172,
+      "completion_tokens": 5,
+      "use_time": 8,
+      "is_stream": false,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071404163983063548268d9d6yooCjrX3",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 5,
+      "user_id": 6953,
+      "created_at": 1794060252,
+      "type": 2,
+      "content": "",
+      "username": "jiesener",
+      "token_name": "0.6",
+      "model_name": "gpt-5.6-terra",
+      "quota": 229598,
+      "prompt_tokens": 26563,
+      "completion_tokens": 675,
+      "use_time": 36,
+      "is_stream": true,
+      "channel": 443,
+      "channel_name": "",
+      "token_id": 7178,
+      "group": "gpt pro",
+      "ip": "",
+      "request_id": "202611071403368646889018268d9d6JVwvHhq7",
+      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1202,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
+    },
+    {
+      "id": 6,
+      "user_id": 6953,
       "created_at": 1794036248,
       "type": 2,
       "content": "",
@@ -2255,7 +2365,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1171,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 2,
+      "id": 7,
       "user_id": 6953,
       "created_at": 1794029308,
       "type": 2,
@@ -2277,7 +2387,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20480,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2423,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 3,
+      "id": 8,
       "user_id": 6953,
       "created_at": 1793926500,
       "type": 2,
@@ -2299,7 +2409,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20291,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":4189,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 4,
+      "id": 9,
       "user_id": 6953,
       "created_at": 1793926408,
       "type": 2,
@@ -2321,7 +2431,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1940,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 5,
+      "id": 10,
       "user_id": 6953,
       "created_at": 1793859590,
       "type": 2,
@@ -2343,7 +2453,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":807,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 6,
+      "id": 11,
       "user_id": 6953,
       "created_at": 1793855047,
       "type": 2,
@@ -2365,7 +2475,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1600,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 7,
+      "id": 12,
       "user_id": 6953,
       "created_at": 1793841967,
       "type": 2,
@@ -2387,7 +2497,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":829,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 8,
+      "id": 13,
       "user_id": 6953,
       "created_at": 1793841934,
       "type": 2,
@@ -2409,7 +2519,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1048,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 9,
+      "id": 14,
       "user_id": 6953,
       "created_at": 1793841522,
       "type": 2,
@@ -2431,7 +2541,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":11648,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1476,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 10,
+      "id": 15,
       "user_id": 6953,
       "created_at": 1793779948,
       "type": 2,
@@ -2453,7 +2563,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1326,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 11,
+      "id": 16,
       "user_id": 6953,
       "created_at": 1793698420,
       "type": 2,
@@ -2475,7 +2585,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1709,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 12,
+      "id": 17,
       "user_id": 6953,
       "created_at": 1793691033,
       "type": 2,
@@ -2497,7 +2607,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1255,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 13,
+      "id": 18,
       "user_id": 6953,
       "created_at": 1793683907,
       "type": 2,
@@ -2519,7 +2629,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":7292,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 14,
+      "id": 19,
       "user_id": 6953,
       "created_at": 1793683040,
       "type": 2,
@@ -2541,7 +2651,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":5237,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 15,
+      "id": 20,
       "user_id": 6953,
       "created_at": 1793665493,
       "type": 2,
@@ -2563,7 +2673,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 16,
+      "id": 21,
       "user_id": 6953,
       "created_at": 1793665483,
       "type": 2,
@@ -2585,7 +2695,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":5120,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1313,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 17,
+      "id": 22,
       "user_id": 6953,
       "created_at": 1793664431,
       "type": 2,
@@ -2607,7 +2717,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":17152,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 18,
+      "id": 23,
       "user_id": 6953,
       "created_at": 1793664428,
       "type": 2,
@@ -2629,7 +2739,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":14080,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 19,
+      "id": 24,
       "user_id": 6953,
       "created_at": 1793664424,
       "type": 2,
@@ -2651,7 +2761,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 20,
+      "id": 25,
       "user_id": 6953,
       "created_at": 1793664385,
       "type": 2,
@@ -2673,7 +2783,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1637,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 21,
+      "id": 26,
       "user_id": 6953,
       "created_at": 1793620191,
       "type": 2,
@@ -2695,7 +2805,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1577,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 22,
+      "id": 27,
       "user_id": 6953,
       "created_at": 1793603155,
       "type": 2,
@@ -2717,7 +2827,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":15133,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 23,
+      "id": 28,
       "user_id": 6953,
       "created_at": 1793599966,
       "type": 2,
@@ -2739,7 +2849,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":28288,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1943,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 24,
+      "id": 29,
       "user_id": 6953,
       "created_at": 1793599848,
       "type": 2,
@@ -2761,7 +2871,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":783,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 25,
+      "id": 30,
       "user_id": 6953,
       "created_at": 1793597238,
       "type": 2,
@@ -2783,7 +2893,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1767,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 26,
+      "id": 31,
       "user_id": 6953,
       "created_at": 1793595190,
       "type": 2,
@@ -2805,7 +2915,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":23424,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1385,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 27,
+      "id": 32,
       "user_id": 6953,
       "created_at": 1793595182,
       "type": 2,
@@ -2827,7 +2937,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20224,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1829,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 28,
+      "id": 33,
       "user_id": 6953,
       "created_at": 1793595179,
       "type": 2,
@@ -2849,7 +2959,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20224,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1682,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 29,
+      "id": 34,
       "user_id": 6953,
       "created_at": 1793595175,
       "type": 2,
@@ -2871,7 +2981,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":19968,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1647,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 30,
+      "id": 35,
       "user_id": 6953,
       "created_at": 1793595166,
       "type": 2,
@@ -2893,7 +3003,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":19200,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2001,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 31,
+      "id": 36,
       "user_id": 6953,
       "created_at": 1793595117,
       "type": 2,
@@ -2915,7 +3025,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 32,
+      "id": 37,
       "user_id": 6953,
       "created_at": 1793595109,
       "type": 2,
@@ -2937,7 +3047,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":18432,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1054,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 33,
+      "id": 38,
       "user_id": 6953,
       "created_at": 1793594281,
       "type": 2,
@@ -2959,7 +3069,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2019,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 34,
+      "id": 39,
       "user_id": 6953,
       "created_at": 1793593639,
       "type": 2,
@@ -2981,7 +3091,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":8580,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 35,
+      "id": 40,
       "user_id": 6953,
       "created_at": 1793593636,
       "type": 2,
@@ -3003,7 +3113,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 36,
+      "id": 41,
       "user_id": 6953,
       "created_at": 1793593634,
       "type": 2,
@@ -3025,7 +3135,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 37,
+      "id": 42,
       "user_id": 6953,
       "created_at": 1793593630,
       "type": 2,
@@ -3047,7 +3157,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1995,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 38,
+      "id": 43,
       "user_id": 6953,
       "created_at": 1793588955,
       "type": 2,
@@ -3069,7 +3179,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1794,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 39,
+      "id": 44,
       "user_id": 6953,
       "created_at": 1793587043,
       "type": 2,
@@ -3091,7 +3201,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16351,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":875,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 40,
+      "id": 45,
       "user_id": 6953,
       "created_at": 1793586759,
       "type": 2,
@@ -3113,7 +3223,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":831,\"group_ratio\":6,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":6}"
     },
     {
-      "id": 41,
+      "id": 46,
       "user_id": 6953,
       "created_at": 1793584653,
       "type": 2,
@@ -3135,7 +3245,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":12544,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 42,
+      "id": 47,
       "user_id": 6953,
       "created_at": 1793584650,
       "type": 2,
@@ -3157,7 +3267,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":12544,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 43,
+      "id": 48,
       "user_id": 6953,
       "created_at": 1793584644,
       "type": 2,
@@ -3179,7 +3289,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 44,
+      "id": 49,
       "user_id": 6953,
       "created_at": 1793584638,
       "type": 2,
@@ -3201,7 +3311,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":1574,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1529,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 45,
+      "id": 50,
       "user_id": 6953,
       "created_at": 1793584549,
       "type": 2,
@@ -3223,7 +3333,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 46,
+      "id": 51,
       "user_id": 6953,
       "created_at": 1793584545,
       "type": 2,
@@ -3245,7 +3355,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 47,
+      "id": 52,
       "user_id": 6953,
       "created_at": 1793584515,
       "type": 2,
@@ -3267,7 +3377,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":20006,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":671,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 48,
+      "id": 53,
       "user_id": 6953,
       "created_at": 1793579746,
       "type": 2,
@@ -3289,7 +3399,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":2785,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 49,
+      "id": 54,
       "user_id": 6953,
       "created_at": 1793579738,
       "type": 2,
@@ -3311,7 +3421,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":11947,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1168,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 50,
+      "id": 55,
       "user_id": 6953,
       "created_at": 1793579280,
       "type": 2,
@@ -3333,7 +3443,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 51,
+      "id": 56,
       "user_id": 6953,
       "created_at": 1793579274,
       "type": 2,
@@ -3355,7 +3465,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1152,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 52,
+      "id": 57,
       "user_id": 6953,
       "created_at": 1793579207,
       "type": 2,
@@ -3377,7 +3487,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 53,
+      "id": 58,
       "user_id": 6953,
       "created_at": 1793579198,
       "type": 2,
@@ -3399,7 +3509,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1251,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 54,
+      "id": 59,
       "user_id": 6953,
       "created_at": 1793578290,
       "type": 2,
@@ -3421,7 +3531,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 55,
+      "id": 60,
       "user_id": 6953,
       "created_at": 1793578284,
       "type": 2,
@@ -3443,7 +3553,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":36953,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 56,
+      "id": 61,
       "user_id": 6953,
       "created_at": 1793578282,
       "type": 2,
@@ -3465,7 +3575,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 57,
+      "id": 62,
       "user_id": 6953,
       "created_at": 1793578277,
       "type": 2,
@@ -3487,7 +3597,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1623,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 58,
+      "id": 63,
       "user_id": 6953,
       "created_at": 1793542196,
       "type": 2,
@@ -3509,7 +3619,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1839,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 59,
+      "id": 64,
       "user_id": 6953,
       "created_at": 1793537574,
       "type": 2,
@@ -3531,7 +3641,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":13582,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1011,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 60,
+      "id": 65,
       "user_id": 6953,
       "created_at": 1793537524,
       "type": 2,
@@ -3553,7 +3663,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":13096,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":12333,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 61,
+      "id": 66,
       "user_id": 6953,
       "created_at": 1793535574,
       "type": 2,
@@ -3575,7 +3685,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1495,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 62,
+      "id": 67,
       "user_id": 6953,
       "created_at": 1793533031,
       "type": 2,
@@ -3597,7 +3707,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1618,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 63,
+      "id": 68,
       "user_id": 6953,
       "created_at": 1793531037,
       "type": 2,
@@ -3619,7 +3729,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":876,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 64,
+      "id": 69,
       "user_id": 6953,
       "created_at": 1793526654,
       "type": 2,
@@ -3641,7 +3751,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":972,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 65,
+      "id": 70,
       "user_id": 6953,
       "created_at": 1793524632,
       "type": 2,
@@ -3663,7 +3773,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 66,
+      "id": 71,
       "user_id": 6953,
       "created_at": 1793524598,
       "type": 2,
@@ -3685,7 +3795,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 67,
+      "id": 72,
       "user_id": 6953,
       "created_at": 1793521462,
       "type": 2,
@@ -3707,7 +3817,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":14029,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1103,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 68,
+      "id": 73,
       "user_id": 6953,
       "created_at": 1793520838,
       "type": 2,
@@ -3729,7 +3839,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":977,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 69,
+      "id": 74,
       "user_id": 6953,
       "created_at": 1793520376,
       "type": 2,
@@ -3751,7 +3861,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":786,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 70,
+      "id": 75,
       "user_id": 6953,
       "created_at": 1793520163,
       "type": 2,
@@ -3773,7 +3883,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2008,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 71,
+      "id": 76,
       "user_id": 6953,
       "created_at": 1793519389,
       "type": 2,
@@ -3795,7 +3905,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 72,
+      "id": 77,
       "user_id": 6953,
       "created_at": 1793519384,
       "type": 2,
@@ -3817,7 +3927,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1206,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 73,
+      "id": 78,
       "user_id": 6953,
       "created_at": 1793518734,
       "type": 2,
@@ -3839,7 +3949,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 74,
+      "id": 79,
       "user_id": 6953,
       "created_at": 1793518727,
       "type": 2,
@@ -3861,7 +3971,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1170,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 75,
+      "id": 80,
       "user_id": 6953,
       "created_at": 1793518600,
       "type": 2,
@@ -3883,7 +3993,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":2533,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 76,
+      "id": 81,
       "user_id": 6953,
       "created_at": 1793518593,
       "type": 2,
@@ -3905,7 +4015,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1782,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 77,
+      "id": 82,
       "user_id": 6953,
       "created_at": 1793518584,
       "type": 2,
@@ -3927,7 +4037,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":4864,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 78,
+      "id": 83,
       "user_id": 6953,
       "created_at": 1793518581,
       "type": 2,
@@ -3949,7 +4059,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 79,
+      "id": 84,
       "user_id": 6953,
       "created_at": 1793513317,
       "type": 2,
@@ -3971,7 +4081,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 80,
+      "id": 85,
       "user_id": 6953,
       "created_at": 1793513308,
       "type": 2,
@@ -3993,7 +4103,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":11264,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1615,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 81,
+      "id": 86,
       "user_id": 6953,
       "created_at": 1793513230,
       "type": 2,
@@ -4015,7 +4125,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 82,
+      "id": 87,
       "user_id": 6953,
       "created_at": 1793513223,
       "type": 2,
@@ -4037,7 +4147,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":938,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 83,
+      "id": 88,
       "user_id": 6953,
       "created_at": 1793510023,
       "type": 2,
@@ -4059,7 +4169,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":2014,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 84,
+      "id": 89,
       "user_id": 6953,
       "created_at": 1793509564,
       "type": 2,
@@ -4081,7 +4191,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1820,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 85,
+      "id": 90,
       "user_id": 6953,
       "created_at": 1793509487,
       "type": 2,
@@ -4103,7 +4213,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 86,
+      "id": 91,
       "user_id": 6953,
       "created_at": 1793509478,
       "type": 2,
@@ -4125,7 +4235,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16632,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1161,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 87,
+      "id": 92,
       "user_id": 6953,
       "created_at": 1793509406,
       "type": 2,
@@ -4147,7 +4257,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":4864,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 88,
+      "id": 93,
       "user_id": 6953,
       "created_at": 1793509397,
       "type": 2,
@@ -4169,7 +4279,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":16016,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1363,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 89,
+      "id": 94,
       "user_id": 6953,
       "created_at": 1793507398,
       "type": 2,
@@ -4191,7 +4301,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1579,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 90,
+      "id": 95,
       "user_id": 6953,
       "created_at": 1793506733,
       "type": 2,
@@ -4213,7 +4323,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 91,
+      "id": 96,
       "user_id": 6953,
       "created_at": 1793506725,
       "type": 2,
@@ -4235,7 +4345,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1529,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 92,
+      "id": 97,
       "user_id": 6953,
       "created_at": 1793493614,
       "type": 2,
@@ -4257,7 +4367,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 93,
+      "id": 98,
       "user_id": 6953,
       "created_at": 1793493601,
       "type": 2,
@@ -4279,7 +4389,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":947,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 94,
+      "id": 99,
       "user_id": 6953,
       "created_at": 1793491956,
       "type": 2,
@@ -4301,7 +4411,7 @@
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     },
     {
-      "id": 95,
+      "id": 100,
       "user_id": 6953,
       "created_at": 1793491948,
       "type": 2,
@@ -4321,116 +4431,6 @@
       "ip": "",
       "request_id": "202611010012151466642438268d9d6jTFBdEKP",
       "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":648,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 96,
-      "user_id": 6953,
-      "created_at": 1793441312,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 156105,
-      "prompt_tokens": 13510,
-      "completion_tokens": 61,
-      "use_time": 5,
-      "is_stream": false,
-      "channel": 212,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610311008274826888718268d9d6xjGh2Jf3",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":-1000,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"none\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 97,
-      "user_id": 6953,
-      "created_at": 1793441273,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 306101,
-      "prompt_tokens": 24977,
-      "completion_tokens": 372,
-      "use_time": 15,
-      "is_stream": true,
-      "channel": 212,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610311007383943128428268d9d6sD1NqoJI",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1406,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 98,
-      "user_id": 6953,
-      "created_at": 1793366120,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 286571,
-      "prompt_tokens": 22593,
-      "completion_tokens": 480,
-      "use_time": 9,
-      "is_stream": true,
-      "channel": 443,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610301315117327829358268d9d6194QwjJN",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":3645,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 99,
-      "user_id": 6953,
-      "created_at": 1793338670,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 279473,
-      "prompt_tokens": 21722,
-      "completion_tokens": 520,
-      "use_time": 14,
-      "is_stream": true,
-      "channel": 443,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610300537366122197378268d9d6yCN8hrwc",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1568,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
-    },
-    {
-      "id": 100,
-      "user_id": 6953,
-      "created_at": 1793336898,
-      "type": 2,
-      "content": "",
-      "username": "jiesener",
-      "token_name": "0.6",
-      "model_name": "gpt-5.6-terra",
-      "quota": 325744,
-      "prompt_tokens": 26675,
-      "completion_tokens": 380,
-      "use_time": 6,
-      "is_stream": true,
-      "channel": 443,
-      "channel_name": "",
-      "token_id": 7178,
-      "group": "gpt pro",
-      "ip": "",
-      "request_id": "202610300508128026152158268d9d6o9Z7EdM5",
-      "other": "{\"billing_mode\":\"tiered_expr\",\"billing_source\":\"wallet\",\"cache_ratio\":0,\"cache_tokens\":0,\"completion_ratio\":0,\"expr_b64\":\"bGVuIDwgMjcyMDAwID8gdGllcigiYmFzZSIsIHAgKiAyLjUgKyBjICogMTUgKyBjciAqIDAuMjUgKyBjYyAqIDQpIDogdGllcigi77yeMjcySyIsIHAgKiA0ICsgYyAqIDIwICsgY3IgKiAwLjUgKyBjYyAqIDgp\",\"frt\":1461,\"group_ratio\":9,\"matched_tier\":\"base\",\"model_price\":0,\"model_ratio\":0,\"reasoning_effort\":\"low\",\"request_conversion\":[\"OpenAI Compatible\"],\"request_path\":\"/v1/chat/completions\",\"user_group_ratio\":9}"
     }
   ],
   "log_count": 200
